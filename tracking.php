@@ -1,3 +1,26 @@
+<?php 
+require_once "config.php";
+
+if (isset($_REQUEST["track"])) {
+
+    $fc = $_REQUEST["tid"];
+
+
+    $ins = "SELECT status FROM inquiry WHERE ID=$ID";
+    $query1 = mysqli_query($connection, $ins);
+
+    
+}
+
+
+
+
+?>
+
+
+
+
+
 <!doctype html>
 <html class="no-js" lang="en">
     <head>
@@ -434,11 +457,14 @@
                         <div class="col-xl-8 col-lg-10">
                             <div class="tracking-id-info text-center">
                                 <p>Enter Your Cargo Tracking, Door to Door Office <a href="#">Order Number.</a></p>
-                                <form action="#" class="tracking-id-form">
-                                    <input type="text" placeholder="Tracking id">
-                                    <button class="btn red-btn">Tracking</button>
+                                <form action="tracking.php" class="tracking-id-form">
+                                    <input name="tid" type="text" placeholder="Tracking id">
+                                    <button type="submit" name="track" class="btn red-btn">Tracking</button>
                                 </form>
-                                <div class="tracking-list">
+                                <h5><?php
+                                echo ["ID"];
+                                ?></h5>
+                                <!-- <div class="tracking-list">
                                     <ul>
                                         <li>
                                             <div class="tracking-list-icon">
@@ -473,10 +499,10 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="tracking-help">
+                                </div> -->
+                                <!-- <div class="tracking-help">
                                     <p>MULTIPLE TRACKING NUMBERS | <a href="#">NEED HELP?</a></p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

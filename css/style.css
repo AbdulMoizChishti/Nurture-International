@@ -498,7 +498,7 @@ label {
 	content: "";
 	position: absolute;
 	width: 695px;
-	background: #1a1c27;
+	/* background:  rgba(146, 142, 142, 0.589); */
 	height: 100%;
 	top: 0;
 	clip-path: polygon(0px 0px, 94% 0px, 100% 100%, 0% 100%);
@@ -616,7 +616,7 @@ label {
 	margin-right: 30px;
 }
 .third-header-top {
-	background-color: rgb(23, 25, 36, .941);
+	background-color: rgba(146, 142, 142, 0.589);
 	padding: 34px 0;
 	position: relative;
 }
@@ -1051,13 +1051,13 @@ label {
 	color: #ff4612;
 	right: 0;
 }
-.tracking-modal-map {
+/* .tracking-modal-map {
 	overflow: hidden;
 }
 .tracking-modal-map #contact-map {
 	width: 300px;
 	height: 290px;
-}
+} */
 
 /* 4. Search modal */
 #search-modal,

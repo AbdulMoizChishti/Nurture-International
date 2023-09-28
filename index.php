@@ -1,3 +1,42 @@
+<?php
+require_once "config.php";
+
+if (isset($_REQUEST["submit"])) {
+
+    $fc = $_REQUEST["fromcountry"];
+    $fa = $_REQUEST["fromaddress"];
+    $tc = $_REQUEST["tocountry"];
+    $ta = $_REQUEST["toaddress"];
+    $size = $_REQUEST["Size"];
+    $qty = $_REQUEST["qty"];
+    $weight = $_REQUEST["weight"];
+    $ft = $_REQUEST["freighttype"];
+    $category = $_REQUEST["category"];
+    $email = $_REQUEST["email"];
+    // $IDcar = $_REQUEST["IDcar"];
+
+
+
+    $ins = "INSERT INTO inquiry (fromcountry, fromaddress,tocountry,toaddress, Size, qty, weight, freighttype, category, email ,status) VALUES ('$fc','$fa','$tc','$ta','$size','$qty','$weight','$ft','$category','$email','to be inquired')";
+    $query1 = mysqli_query($connection, $ins);
+
+    if ($query1) {
+        echo "Records Inserted";
+    }
+}
+
+?>
+
+
+
+
+
+
+
+
+
+
+
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -93,10 +132,10 @@
                     <div class="col-xl-9 col-lg-8">
                         <div class="third-header-contact">
                             <div class="third-header-form">
-                                <form action="#">
+                                <!-- <form action="#">
                                     <input type="text" placeholder="Enter Tracking Id...">
                                     <button><i class="fas fa-search"></i></button>
-                                </form>
+                                </form> -->
                             </div>
                             <div class="third-hrader-contact-list">
                                 <ul>
@@ -106,8 +145,7 @@
                                         </div>
                                         <div class="thc-content">
                                             <p><span>Call :</span> +1244 8964 4512</p>
-                                            <p><a href="" class="__cf_email__"
-                                                    data-cfemail="234a4d454c63465b464e534f460d404c4e">info@nilcl.com</a>
+                                            <p><a href="" class="__cf_email__" data-cfemail="234a4d454c63465b464e534f460d404c4e">info@nilcl.com</a>
                                             </p>
                                         </div>
                                     </li>
@@ -132,8 +170,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-6">
                         <div class="logo">
-                            <a href="index.html"><img src="img/logo/logo.png" class="mobile-logo logo-none"
-                                    alt="Logo"></a>
+                            <a href="index.html"><img src="img/logo/logo.png" class="mobile-logo logo-none" alt="Logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-6 d-none d-md-block">
@@ -181,8 +218,7 @@
                                         class="flaticon-magnifying-glass"></i></a>
                             </div> -->
                             <div class="header-btn">
-                                <a href="#" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img
-                                        src="img/icon/calculator-symbols.png" alt="icon">Get Fare Rate</a>
+                                <a href="#" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img src="img/icon/calculator-symbols.png" alt="icon">Get Fare Rate</a>
                             </div>
                         </div>
                     </div>
@@ -216,7 +252,7 @@
                                     <a class="nav-link btn-blue-grey" href="#step-3">tracking information</a>
                                 </li>
                             </ul>
-                            <form action="#" method="post">
+                            <form action="index.php" method="post">
                                 <div class="single-setup" id="step-1">
                                     <div class="fare-rate-tab-content">
                                         <div class="modal-shipping-info">
@@ -228,14 +264,17 @@
                                                     <div class="shipping-address-form">
                                                         <div class="shipping-country-box form-group">
                                                             <label for="from-country">from country</label>
-                                                            <input type="text" required="required" id="from-country"
-                                                                placeholder="Select Your Destination">
+                                                            <!-- <input type="text" required="required" id="from-country"
+                                                                placeholder="Select Your Destination"> -->
+
+                                                            <select name="fromcountry" type="text" required="required" id="from-country" placeholder="Select Your Destination" class="custom-select">
+                                                                <option selected="">USA</option>
+                                                                <option>USA</option>
+                                                            </select>
                                                         </div>
                                                         <div class="shipping-address-box form-group">
                                                             <label for="from-country-location">add your location</label>
-                                                            <input type="text" required="required"
-                                                                id="from-country-location"
-                                                                placeholder="Select Your Destination">
+                                                            <input name="fromaddress" type="text" required="required" id="from-country-location" placeholder="Select Your Destination">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -246,14 +285,18 @@
                                                     <div class="shipping-address-form">
                                                         <div class="shipping-country-box form-group">
                                                             <label for="to-country">TO country</label>
-                                                            <input type="text" required="required" id="to-country"
-                                                                placeholder="Select Your Destination">
+                                                            <!-- <input type="text" required="required" id="to-country"
+                                                                placeholder="Select Your Destination"> -->
+
+                                                            <select name="tocountry" type="text" required="required" id="to-country" placeholder="Select Your Destination" class="custom-select">
+                                                                <option selected="">UAE</option>
+                                                                <option>PAK</option>
+                                                                <!-- <option>UAE</option> -->
+                                                            </select>
                                                         </div>
                                                         <div class="shipping-address-box form-group">
                                                             <label for="to-country-location">add your location</label>
-                                                            <input type="text" required="required"
-                                                                id="to-country-location"
-                                                                placeholder="Select Your Destination">
+                                                            <input name="toaddress" type="text" required="required" id="to-country-location" placeholder="Select Your Destination">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -281,12 +324,12 @@
                                         <div class="modal-shipping-details">
                                             <div class="modal-shipping-title">
                                                 <h2>items <span>details</span></h2>
-                                                <h2 class="f-right">total cost : <span>$ 19.00</span></h2>
+                                                <!-- <h2 class="f-right">total cost : <span>$ 19.00</span></h2> -->
                                             </div>
                                             <div class="shipping-details-info">
                                                 <div class="single-shipping-details-box">
                                                     <label for="packaging-size">packaging size</label>
-                                                    <select class="custom-select" id="packaging-size">
+                                                    <select class="custom-select" id="packaging-size" name="Size">
                                                         <option selected="">Standart Size ( 42” x 36” )</option>
                                                         <option>Standart Size ( 82” x 86” )</option>
                                                         <option>Standart Size ( 102” x 165” )</option>
@@ -296,11 +339,11 @@
                                                 </div>
                                                 <div class="single-shipping-details-box shipping-qty">
                                                     <label for="QTY-number">QTY</label>
-                                                    <input type="number" value="1" id="QTY-number" required="required">
+                                                    <input type="number" value="1" id="QTY-number" required="required" name="qty">
                                                 </div>
                                                 <div class="single-shipping-details-box shipping-weight">
                                                     <label for="packaging-weight">TOTAL WEIGHT</label>
-                                                    <select class="custom-select" id="packaging-weight">
+                                                    <select class="custom-select" id="packaging-weight" name="weight">
                                                         <option selected="">KG</option>
                                                         <option>20KG</option>
                                                         <option>30KG</option>
@@ -310,44 +353,35 @@
                                                     </select>
                                                 </div>
                                                 <div class="single-shipping-details-box shipping-transport">
-                                                    <label for="cargo-transport">cargo transport</label>
-                                                    <select class="custom-select" id="cargo-transport">
-                                                        <option selected="">IN</option>
-                                                        <option>1500in</option>
-                                                        <option>2000in</option>
-                                                        <option>2500in</option>
-                                                        <option>3000in</option>
+                                                    <label for="cargo-transport">Freight type</label>
+                                                    <select class="custom-select" id="cargo-transport" name="freighttype">
+                                                        <option selected="">Air Freight</option>
+                                                        <option>Air Freight</option>
+                                                        <option>Ocean Freight</option>
+                                                        <option>Drayage</option>
+                                                        <!-- <option>3000in</option>
                                                         <option>3500in</option>
-                                                        <option>4000in</option>
+                                                        <option>4000in</option> -->
                                                     </select>
                                                 </div>
                                                 <div class="single-shipping-details-box shipping-product">
                                                     <label for="product-category">product category</label>
-                                                    <select class="custom-select" id="product-category">
-                                                        <option selected="">Glass Product</option>
-                                                        <option>Glass Product</option>
-                                                        <option>Glass Product</option>
-                                                        <option>Glass Product</option>
-                                                        <option>Glass Product</option>
+                                                    <select class="custom-select" id="product-category" name="category">
+                                                        <option selected="">Package</option>
+                                                        <option>Envelope</option>
+                                                        <option>Box</option>
+                                                        <option>Pallets</option>
+                                                        <!-- <option>Glass Product</option> -->
                                                     </select>
                                                 </div>
                                             </div>
+
                                             <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" required="required" class="custom-control-input"
-                                                    id="customControlInline">
-                                                <label class="custom-control-label" for="customControlInline">Logistics
-                                                    is generally the
-                                                    detailed organization and implementation of a complex operation. In
-                                                    a general
-                                                    business sense, logistics is the management of the flow of things
-                                                    between the point
-                                                    of origin and the point</label>
+                                                <input name="email" type="email" id="email" placeholder="Enter Your Email">
                                             </div>
                                         </div>
                                         <button class="btn f-left prevBtn-2 btn-success" type="button">Previous</button>
-                                        <button class="btn f-right nextBtn-2 btn-success"
-                                            type="button"><span>$19.00</span>
-                                            Booking</button>
+                                        <button class="btn f-right nextBtn-2 btn-success" type="submit" name="submit">Inquire</button>
                                     </div>
                                 </div>
                                 <div class="single-setup" id="step-3">
@@ -360,26 +394,26 @@
                                                 <div class="shipping-details-info shipping-tracking-info">
                                                     <div class="modal-tracking-info">
                                                         <label for="invoice-id">invoice Id</label>
-                                                        <input type="text" id="invoice-id" placeholder="Enter Your Id">
+                                                        <input name="tid" type="text" id="invoice-id" placeholder="Enter Your Id">
                                                     </div>
                                                     <div class="modal-tracking-info">
                                                         <label>Search invoice</label>
-                                                        <button class="btn nextBtn-2 btn-success">find your
+                                                        <button name="track" type="submit" class="btn nextBtn-2 btn-success">find your
                                                             product</button>
                                                     </div>
                                                 </div>
                                                 <div class="tracking-quots-board">
-                                                    <label>your happiness quotes</label>
+                                                    <label>Details</label>
                                                     <div class="tracking-quots-board-info">
                                                         <img src="img/bg/board_bg.jpg" alt="img">
-                                                        <h5>On Board Your Products. Now Product is
-                                                            Malaysia Ocean</h5>
+                                                        <h5></h5>
+
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="tracking-modal-map">
+                                            <!-- <div class="tracking-modal-map">
                                                 <div id="contact-map"></div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -405,14 +439,12 @@
                                 <div class="s-slider-content t-slider-content text-center">
                                     <h6 data-animation="fadeInUp" data-delay=".2s"><span class="dots"></span>logistics
                                         cargo service<span class="dots2"></span></h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s">Delivery Express</h2>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s">Consolidation & Deconsolidation</h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">Logistics is generally the detailed
                                         organization and implementation of a complex tiona general business sense,
                                         logistics
                                         is the management</p>
-                                    <a href="#" class="btn red-btn " data-animation="fadeInUp" data-delay=".8s"
-                                        data-toggle="modal" data-target="#exampleModalLong"
-                                        data-animation="fadeInUp">Get Fare Rate</a>
+                                    <a href="#" class="btn red-btn " data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get Fare Rate</a>
                                 </div>
                             </div>
                         </div>
@@ -425,14 +457,12 @@
                                 <div class="s-slider-content t-slider-content text-center">
                                     <h6 data-animation="fadeInUp" data-delay=".2s"><span class="dots"></span>logistics
                                         cargo service<span class="dots2"></span></h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s">fast services</h2>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s">Express Delivery</h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">Logistics is generally the detailed
                                         organization and implementation of a complex tiona general business sense,
                                         logistics
                                         is the management</p>
-                                    <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s"
-                                        data-toggle="modal" data-target="#exampleModalLong"
-                                        data-animation="fadeInUp">Get Fare Rate</a>
+                                    <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get Fare Rate</a>
                                 </div>
                             </div>
                         </div>
@@ -445,14 +475,12 @@
                                 <div class="s-slider-content t-slider-content text-center">
                                     <h6 data-animation="fadeInUp" data-delay=".2s"><span class="dots"></span>logistics
                                         cargo service<span class="dots2"></span></h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s">start shipping</h2>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s">End to End Logistics</h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">Logistics is generally the detailed
                                         organization and implementation of a complex tiona general business sense,
                                         logistics
                                         is the management</p>
-                                    <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s"
-                                        data-toggle="modal" data-target="#exampleModalLong"
-                                        data-animation="fadeInUp">Get Fare Rate</a>
+                                    <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get Fare Rate</a>
                                 </div>
                             </div>
                         </div>
@@ -712,17 +740,14 @@
                                 <p>Express delivery is an innovative service is effective logistics solution for the
                                     delivery of small cargo. This service
                                     is useful for companies of various effective logistics scale.</p>
-                                <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s"
-                                    data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get
+                                <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get
                                     Fare Rate</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="overlay-title paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15"
-                data-paroller-factor-md="0.15" data-paroller-factor-sm="0.15" data-paroller-type="foreground"
-                data-paroller-direction="horizontal">Cargo</div>
+            <div class="overlay-title paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15" data-paroller-factor-md="0.15" data-paroller-factor-sm="0.15" data-paroller-type="foreground" data-paroller-direction="horizontal">Cargo</div>
         </section>
         <!-- services-area-end -->
 
@@ -1152,9 +1177,7 @@
         <!-- rating-area-end -->
         <!-- delivery-services -->
         <section class="delivery-services position-relative fix pt-110">
-            <div class="overlay-title paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15"
-                data-paroller-factor-md="0.15" data-paroller-factor-sm="0.15" data-paroller-type="foreground"
-                data-paroller-direction="horizontal">service</div>
+            <div class="overlay-title paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15" data-paroller-factor-md="0.15" data-paroller-factor-sm="0.15" data-paroller-type="foreground" data-paroller-direction="horizontal">service</div>
             <div class="delivery-services-bg"></div>
             <div class="container">
                 <div class="delivery-services-wrap">
@@ -1456,10 +1479,8 @@
                                 <p>Lorem ipsum dolor sit amet, consy eetur adipisc de elit. Quisque act raqum nunc no
                                     dolor
                                 </p>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png"
-                                        alt="img"></a>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png"
-                                        alt="img"></a>
+                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
+                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a>
                             </div>
                         </div>
                     </div>
@@ -1471,7 +1492,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-7">
                         <div class="copyright-text">
-                            <p>Copyright© <span>Nurture Int'l LCL </span> | All Rights Reserved</p>
+                            <p>Copyright© <span> <a href="login.php"> Nurture Int'l LCL </a> </span> | All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">
