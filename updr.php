@@ -3,19 +3,17 @@ require_once "config.php";
 
 if (isset($_POST["submit"])) {
 
-    $Make = $_POST["Make"];
-    $Model = $_POST["Model"];
-    $IDcar = $_POST["IDcar"];
-    $Price = $_POST["Price"];
+    $id=$_POST["id"];
+    $status = $_POST["status"];
 
 
 
 
-    $ins = "UPDATE car SET Make='$Make',Model='$Model', Price='$Price' WHERE IDcar='$IDcar'";
+    $ins = "UPDATE inquiry SET status='$status' WHERE ID=$id";
     $query1 = mysqli_query($connection, $ins);
     
     if ($query1) {
-        header("Location: ./retr.php ");
+        header("Location: table.php ");
     }
 }
 
@@ -203,24 +201,13 @@ if (isset($_POST["submit"])) {
 
             <div class="form-item">
 
-                <input type="text" class="form-control" name="Make" placeholder="Make" id="Make" />
+                <input type="text" class="form-control" name="id" placeholder="id" id="id" />
             </div>
 
 
             <div class="form-item">
 
-                <input type="text" class="form-control" name="Model" placeholder="Model" id="Model" />
-            </div>
-
-
-            <div class="form-item">
-
-                <input type="text" class="form-control" name="IDcar" placeholder="IDcar" id="IDcar" />
-            </div>
-
-            <div class="form-item">
-
-                <input type="text" class="form-control" name="Price" placeholder="Price" id="Price" />
+                <input type="text" class="form-control" name="status" placeholder="status" id="status" />
             </div>
 
             <div class="form-item">

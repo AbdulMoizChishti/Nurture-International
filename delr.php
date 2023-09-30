@@ -4,16 +4,16 @@ require_once "config.php";
 
 if (isset($_REQUEST["submit"])) {
 
-    $IDcar = $_REQUEST["IDcar"];
+    $ID = $_REQUEST["ID"];
 
 
 
-    $sql = 'DELETE FROM car WHERE IDcar=' . $IDcar;
+    $sql = 'DELETE FROM inquiry WHERE ID=' . $ID;
     $query1 = mysqli_query($connection, $sql);
 
 
     if ($query1) {
-        header("Location: retr.php");
+        header("Location: table.php");
     }
 }
 ?>
@@ -197,7 +197,7 @@ if (isset($_REQUEST["submit"])) {
 
             <div class="form-item">
 
-                <input type="text" class="form-control" name="IDcar" placeholder="IDcar" id="IDcar" />
+                <input type="text" class="form-control" name="ID" placeholder="ID" id="ID" />
             </div>
 
             <div class="form-item">

@@ -208,35 +208,33 @@
         <a href="table.php">Viewrecord</a>
       </div>
 
-      <div class="form-item">
+      <!-- <div class="form-item">
         <span class="material-icons-outlined">
           account_circle
         </span>
         <a href="./insertr.php">insert record</a>
+      </div> -->
+
+      <div class="form-item">
+        <span class="material-icons-outlined">
+          account_circle
+        </span>
+        <a href="updr.php">Update record</a>
       </div>
 
       <div class="form-item">
         <span class="material-icons-outlined">
           account_circle
         </span>
-        <a href="./updr.php">Update record</a>
+        <a href="delr.php">delete record</a>
       </div>
 
       <div class="form-item">
         <span class="material-icons-outlined">
           account_circle
         </span>
-        <a href="./delr.php">delete record</a>
+        <a href="index.php">Home</a>
       </div>
-
-      <div class="form-item">
-        <span class="material-icons-outlined">
-          account_circle
-        </span>
-        <a href="./index.php">Home</a>
-      </div>
-
-      <!-- <button type="submit"> LOGIN </button> -->
     </form>
 
   </div>

@@ -11,17 +11,23 @@ include("developers.php");
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-14">
                 <?php echo $deleteMsg ?? ''; ?>
                 <div class="table-responsive">
                     <table class="table table-bordered">
+                       <center> <h1>Inquiries</h1></center>
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>From Country</th>
+                                <th>From Address</th>
                                 <th>To Country</th>
+                                <th>To Address</th>
                                 <th>Size</th>
+                                <th>Qty</th>
+                                <th>Weight</th>
                                 <th>Freight Type</th>
+                                <th>Category</th>
                                 <th>Email</th>
                                 <th>status</th>
                         </thead>
@@ -32,11 +38,16 @@ include("developers.php");
                                 foreach ($fetchData as $data) {
                             ?>
                                     <tr>
-                                        <td><?php echo $sn; ?></td>
+                                        <td><?php echo $data['ID'] ?? ''; ?></td>
                                         <td><?php echo $data['fromcountry'] ?? ''; ?></td>
+                                        <td><?php echo $data['fromaddress'] ?? ''; ?></td>
                                         <td><?php echo $data['tocountry'] ?? ''; ?></td>
+                                        <td><?php echo $data['toaddress'] ?? ''; ?></td>
                                         <td><?php echo $data['Size'] ?? ''; ?></td>
+                                        <td><?php echo $data['qty'] ?? ''; ?></td>
+                                        <td><?php echo $data['weight'] ?? ''; ?></td>
                                         <td><?php echo $data['freighttype'] ?? ''; ?></td>
+                                        <td><?php echo $data['category'] ?? ''; ?></td>
                                         <td><?php echo $data['email'] ?? ''; ?></td>
                                         <td><?php echo $data['status'] ?? ''; ?></td>
                                       
@@ -46,7 +57,7 @@ include("developers.php");
                                 }
                             } else { ?>
                                 <tr>
-                                    <td colspan="8">
+                                    <td colspan="14">
                                         <?php echo $fetchData; ?>
                                     </td>
                                 <tr>

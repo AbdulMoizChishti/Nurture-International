@@ -1,32 +1,41 @@
 <?php
 require_once "config.php";
 
-if (isset($_REQUEST["submit"])) {
+if (isset($_POST["submit"])) {
 
-    $fc = $_REQUEST["fromcountry"];
-    $fa = $_REQUEST["fromaddress"];
-    $tc = $_REQUEST["tocountry"];
-    $ta = $_REQUEST["toaddress"];
-    $size = $_REQUEST["Size"];
-    $qty = $_REQUEST["qty"];
-    $weight = $_REQUEST["weight"];
-    $ft = $_REQUEST["freighttype"];
-    $category = $_REQUEST["category"];
-    $email = $_REQUEST["email"];
-    // $IDcar = $_REQUEST["IDcar"];
+    $fc = $_POST["fromcountry"];
+    $fa = $_POST["fromaddress"];
+    $tc = $_POST["tocountry"];
+    $ta = $_POST["toaddress"];
+    $size = $_POST["Size"];
+    $qty = $_POST["qty"];
+    $weight = $_POST["weight"];
+    $ft = $_POST["freighttype"];
+    $category = $_POST["category"];
+    $email = $_POST["email"];
+    // Capture more form field values as needed
 
+    $ins = "INSERT INTO inquiry (fromcountry, fromaddress, tocountry, toaddress, Size, qty, weight, freighttype, category, email, status) 
+                VALUES ('$fc', '$fa', '$tc', '$ta', '$size', '$qty', '$weight', '$ft', '$category', '$email', 'to be inquired')";
 
-
-    $ins = "INSERT INTO inquiry (fromcountry, fromaddress,tocountry,toaddress, Size, qty, weight, freighttype, category, email ,status) VALUES ('$fc','$fa','$tc','$ta','$size','$qty','$weight','$ft','$category','$email','to be inquired')";
     $query1 = mysqli_query($connection, $ins);
 
     if ($query1) {
-        echo "Records Inserted";
+        $emailAddress = 'moaiz599@gmail.com';
+        $subject = 'Test email';
+        $body = "From country: $fc \n\n From address: $tc";
+
+        $mailtoLink = "mailto:$emailAddress?subject=" . urlencode($subject) . "&body=" . urlencode($body);
+
+        echo '<script>window.location.href = "' . $mailtoLink . '";</script>';
+        
+        exit;
+         // Terminate the script to prevent further execution
+    } else {
+        echo "Error: " . mysqli_error($connection);
     }
 }
-
 ?>
-
 
 
 
@@ -145,7 +154,7 @@ if (isset($_REQUEST["submit"])) {
                                         </div>
                                         <div class="thc-content">
                                             <p><span>Call :</span> +1244 8964 4512</p>
-                                            <p><a href="" class="__cf_email__" data-cfemail="234a4d454c63465b464e534f460d404c4e">info@nilcl.com</a>
+                                            <p><a href="mailto:info@nilcl.com?subject=Mail from our NILCL">info@nilcl.com</a>
                                             </p>
                                         </div>
                                     </li>
@@ -248,11 +257,11 @@ if (isset($_REQUEST["submit"])) {
                                 <li class="nav-item single-steps">
                                     <a class="nav-link btn-blue-grey" href="#step-2">ITEMS TO BE SHIPPED</a>
                                 </li>
-                                <li class="nav-item single-steps">
+                                <!-- <li class="nav-item single-steps">
                                     <a class="nav-link btn-blue-grey" href="#step-3">tracking information</a>
-                                </li>
+                                </li> -->
                             </ul>
-                            <form action="index.php" method="post">
+                            <form action="index.php" method="POST">
                                 <div class="single-setup" id="step-1">
                                     <div class="fare-rate-tab-content">
                                         <div class="modal-shipping-info">
@@ -381,10 +390,12 @@ if (isset($_REQUEST["submit"])) {
                                             </div>
                                         </div>
                                         <button class="btn f-left prevBtn-2 btn-success" type="button">Previous</button>
+                                        <!-- <button class="btn f-right nextBtn-2 btn-success" type="submit" name="submit"></button> -->
                                         <button class="btn f-right nextBtn-2 btn-success" type="submit" name="submit">Inquire</button>
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="single-setup" id="step-3">
+                                <!-- <div class="single-setup" id="step-3">
                                     <div class="fare-rate-tab-content">
                                         <div class="modal-shipping-details">
                                             <div class="modal-shipping-title">
@@ -411,12 +422,12 @@ if (isset($_REQUEST["submit"])) {
                                                     </div>
                                                 </div>
                                             </div>
-                                            <!-- <div class="tracking-modal-map">
+                                             <div class="tracking-modal-map">
                                                 <div id="contact-map"></div>
-                                            </div> -->
+                                            </div> 
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </form>
                         </div>
                     </div>
