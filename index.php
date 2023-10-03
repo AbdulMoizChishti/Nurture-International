@@ -28,23 +28,14 @@ if (isset($_POST["submit"])) {
         $mailtoLink = "mailto:$emailAddress?subject=" . urlencode($subject) . "&body=" . urlencode($body);
 
         echo '<script>window.location.href = "' . $mailtoLink . '";</script>';
-        
+
         exit;
-         // Terminate the script to prevent further execution
+        // Terminate the script to prevent further execution
     } else {
         echo "Error: " . mysqli_error($connection);
     }
 }
 ?>
-
-
-
-
-
-
-
-
-
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -56,7 +47,7 @@ if (isset($_POST["submit"])) {
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon2.png">
     <!-- Place favicon.ico in the root directory -->
 
     <!-- CSS here -->
@@ -129,57 +120,14 @@ if (isset($_POST["submit"])) {
     <!-- preloader end -->
 
     <!-- header-start -->
-    <header class="transparent-header s-transparent-header">
-        <div class="third-header-top d-none d-lg-block">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-3 col-lg-4">
-                        <div class="third-logo">
-                            <a href="index.html"><img src="img/logo/white_logo.png" alt="Logo"></a>
-                        </div>
-                    </div>
-                    <div class="col-xl-9 col-lg-8">
-                        <div class="third-header-contact">
-                            <div class="third-header-form">
-                                <!-- <form action="#">
-                                    <input type="text" placeholder="Enter Tracking Id...">
-                                    <button><i class="fas fa-search"></i></button>
-                                </form> -->
-                            </div>
-                            <div class="third-hrader-contact-list">
-                                <ul>
-                                    <li>
-                                        <div class="thc-icon">
-                                            <i class="fas fa-headphones"></i>
-                                        </div>
-                                        <div class="thc-content">
-                                            <p><span>Call :</span> +1244 8964 4512</p>
-                                            <p><a href="mailto:info@nilcl.com?subject=Mail from our NILCL">info@nilcl.com</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="thc-icon">
-                                            <i class="fas fa-map-marker"></i>
-                                        </div>
-                                        <div class="thc-content">
-                                            <p>Logistics Avenue</p>
-                                            <p>New York</p>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div id="header-sticky" class="main-header third-main-header">
-            <div class="container">
+    <header>
+        <div id="header-sticky" class="main-header transparent-header">
+            <div class="container-fluid header-container-p">
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-6">
                         <div class="logo">
-                            <a href="index.html"><img src="img/logo/logo.png" class="mobile-logo logo-none" alt="Logo"></a>
+                            <a href="index.php"><img src="img/logo/wlogo.png" class="mobile-logo logo-sticky-none" alt="Logo"></a>
+                            <a href="index.php"><img src="img/logo/logo2.png" class="mobile-logo s-logo-none" alt="Logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-6 d-none d-md-block">
@@ -187,22 +135,22 @@ if (isset($_POST["submit"])) {
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li class="active"><a href="index.html">Home</a>
+                                        <li class="active"><a href="index.php">Home</a>
                                             <!-- <ul class="submenu">
-                                                    <li><a href="index.html">Home One</a></li>
+                                                    <li><a href="index.php">Home One</a></li>
                                                     <li class="active"><a href="index-2.html">Home Two</a></li>
                                                     <li><a href="index-3.html">Home Three</a></li>
                                                 </ul> -->
                                         </li>
-                                        <li><a href="about-us.html">About Us</a></li>
-                                        <li><a href="tracking.html">Tracking</a></li>
+                                        <li><a href="about-us.php">About Us</a></li>
+                                        <li><a href="tracking.php">Tracking</a></li>
                                         <li><a href="#">Services</a>
                                             <ul class="submenu">
                                                 <li>
-                                                <li><a href="Air Freight.html">Air Freight</a></li>
-                                                <li><a href="Ocean Freight.html">Ocean Freight</a></li>
-                                                <li><a href="Drayage.html">Drayage</a></li>
-                                                <li><a href="Custom Brokerage.html">Custom Brokerage</a></li>
+                                                <li><a href="Air Freight.php">Air Freight</a></li>
+                                                <li><a href="Ocean Freight.php">Ocean Freight</a></li>
+                                                <li><a href="Drayage.php">Drayage</a></li>
+                                                <li><a href="Custom Brokerage.php">Custom Brokerage</a></li>
                                                 <ul class="submenu">
 
                                                 </ul>
@@ -211,20 +159,19 @@ if (isset($_POST["submit"])) {
                                     </ul>
                                     </li>
                                     <!-- <li><a href="#">News & Media</a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">Blog</a></li>
-                                                <li><a href="blog-classic.html">Blog Classic</a></li>
-                                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
-                                                <li><a href="blog-details.html">Blog Details</a></li>
-                                            </ul>
-                                        </li> -->
-                                    <li><a href="support.html">Support</a></li>
+                                                <ul class="submenu">
+                                                    <li><a href="blog.html">Blog</a></li>
+                                                    <li><a href="blog-classic.html">Blog Classic</a></li>
+                                                    <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
+                                                    <li><a href="blog-details.html">Blog Details</a></li>
+                                                </ul>
+                                            </li> -->
+                                    <li><a href="support.php">Support</a></li>
                                     </ul>
                                 </nav>
                             </div>
                             <!-- <div class="header-search">
-                                <a href="#" data-toggle="modal" data-target="#search-modal"><i
-                                        class="flaticon-magnifying-glass"></i></a>
+                                <a href="#" data-toggle="modal" data-target="#search-modal"><i class="flaticon-magnifying-glass"></i></a>
                             </div> -->
                             <div class="header-btn">
                                 <a href="#" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img src="img/icon/calculator-symbols.png" alt="icon">Get Fare Rate</a>
@@ -237,15 +184,15 @@ if (isset($_POST["submit"])) {
                 </div>
                 <!-- Modal Search -->
                 <!-- <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <form>
-                                <input type="text" placeholder="Search here...">
-                                <button><i class="fa fa-search"></i></button>
-                            </form>
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <input type="text" placeholder="Search here...">
+                                    <button><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </div> -->
+                    </div> -->
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -258,8 +205,8 @@ if (isset($_POST["submit"])) {
                                     <a class="nav-link btn-blue-grey" href="#step-2">ITEMS TO BE SHIPPED</a>
                                 </li>
                                 <!-- <li class="nav-item single-steps">
-                                    <a class="nav-link btn-blue-grey" href="#step-3">tracking information</a>
-                                </li> -->
+                                        <a class="nav-link btn-blue-grey" href="#step-3">tracking information</a>
+                                    </li> -->
                             </ul>
                             <form action="index.php" method="POST">
                                 <div class="single-setup" id="step-1">
@@ -274,16 +221,65 @@ if (isset($_POST["submit"])) {
                                                         <div class="shipping-country-box form-group">
                                                             <label for="from-country">from country</label>
                                                             <!-- <input type="text" required="required" id="from-country"
-                                                                placeholder="Select Your Destination"> -->
+                                                                    placeholder="Select Your Destination"> -->
 
                                                             <select name="fromcountry" type="text" required="required" id="from-country" placeholder="Select Your Destination" class="custom-select">
-                                                                <option selected="">USA</option>
-                                                                <option>USA</option>
+                                                                <option selected="">Alabama</option>
+                                                                <option value="Alabama">Alabama</option>
+                                                                <option value="Alaska">Alaska</option>
+                                                                <option value="Arizona">Arizona</option>
+                                                                <option value="Arkansas">Arkansas</option>
+                                                                <option value="California">California</option>
+                                                                <option value="Colorado">Colorado</option>
+                                                                <option value="Connecticut">Connecticut</option>
+                                                                <option value="Delaware">Delaware</option>
+                                                                <option value="Florida">Florida</option>
+                                                                <option value="Georgia">Georgia</option>
+                                                                <option value="Hawaii">Hawaii</option>
+                                                                <option value="Idaho">Idaho</option>
+                                                                <option value="Illinois">Illinois</option>
+                                                                <option value="Indiana">Indiana</option>
+                                                                <option value="Iowa">Iowa</option>
+                                                                <option value="Kansas">Kansas</option>
+                                                                <option value="Kentucky">Kentucky</option>
+                                                                <option value="Louisiana">Louisiana</option>
+                                                                <option value="Maine">Maine</option>
+                                                                <option value="Maryland">Maryland</option>
+                                                                <option value="Massachusetts">Massachusetts</option>
+                                                                <option value="Michigan">Michigan</option>
+                                                                <option value="Minnesota">Minnesota</option>
+                                                                <option value="Mississippi">Mississippi</option>
+                                                                <option value="Missouri">Missouri</option>
+                                                                <option value="Montana">Montana</option>
+                                                                <option value="Nebraska">Nebraska</option>
+                                                                <option value="Nevada">Nevada</option>
+                                                                <option value="New Hampshire">New Hampshire</option>
+                                                                <option value="New Jersey">New Jersey</option>
+                                                                <option value="New Mexico">New Mexico</option>
+                                                                <option value="New York">New York</option>
+                                                                <option value="North Carolina">North Carolina</option>
+                                                                <option value="North Dakota">North Dakota</option>
+                                                                <option value="Ohio">Ohio</option>
+                                                                <option value="Oklahoma">Oklahoma</option>
+                                                                <option value="Oregon">Oregon</option>
+                                                                <option value="Pennsylvania">Pennsylvania</option>
+                                                                <option value="Rhode Island">Rhode Island</option>
+                                                                <option value="South Carolina">South Carolina</option>
+                                                                <option value="South Dakota">South Dakota</option>
+                                                                <option value="Tennessee">Tennessee</option>
+                                                                <option value="Texas">Texas</option>
+                                                                <option value="Utah">Utah</option>
+                                                                <option value="Vermont">Vermont</option>
+                                                                <option value="Virginia">Virginia</option>
+                                                                <option value="Washington">Washington</option>
+                                                                <option value="West Virginia">West Virginia</option>
+                                                                <option value="Wisconsin">Wisconsin</option>
+                                                                <option value="Wyoming">Wyoming</option>
                                                             </select>
                                                         </div>
                                                         <div class="shipping-address-box form-group">
                                                             <label for="from-country-location">add your location</label>
-                                                            <input name="fromaddress" type="text" required="required" id="from-country-location" placeholder="Select Your Destination">
+                                                            <input name="fromaddress" type="text" required="required" id="from-country-location" placeholder="Your pickup Address">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -295,11 +291,100 @@ if (isset($_POST["submit"])) {
                                                         <div class="shipping-country-box form-group">
                                                             <label for="to-country">TO country</label>
                                                             <!-- <input type="text" required="required" id="to-country"
-                                                                placeholder="Select Your Destination"> -->
+                                                                    placeholder="Select Your Destination"> -->
 
-                                                            <select name="tocountry" type="text" required="required" id="to-country" placeholder="Select Your Destination" class="custom-select">
-                                                                <option selected="">UAE</option>
-                                                                <option>PAK</option>
+                                                            <select name="tocountry" type="text" required="required" id="to-country" placeholder="Your Destination Address" class="custom-select">
+                                                                <option selected="">Abbottabad</option>
+                                                                <option value="Abbottabad">Abbottabad</option>
+                                                                <option value="AhmedpurEast">Ahmedpur East</option>
+                                                                <option value="ArifWala">Arif Wala</option>
+                                                                <option value="Attock">Attock</option>
+                                                                <option value="Bahawalnagar">Bahawalnagar</option>
+                                                                <option value="Bahawalpur">Bahawalpur</option>
+                                                                <option value="Badin">Badin</option>
+                                                                <option value="Bhalwal">Bhalwal</option>
+                                                                <option value="Bhakkar">Bhakkar</option>
+                                                                <option value="Burewala">Burewala</option>
+                                                                <option value="Charsadda">Charsadda</option>
+                                                                <option value="Chakwal">Chakwal</option>
+                                                                <option value="Chaman">Chaman</option>
+                                                                <option value="Chiniot">Chiniot</option>
+                                                                <option value="Chishtian">Chishtian</option>
+                                                                <option value="Dadu">Dadu</option>
+                                                                <option value="Daharki">Daharki</option>
+                                                                <option value="DeraGhaziKhan">Dera Ghazi Khan</option>
+                                                                <option value="DeraIsmailKhan">Dera Ismail Khan</option>
+                                                                <option value="Faisalabad">Faisalabad</option>
+                                                                <option value="Ferozwala">Ferozwala</option>
+                                                                <option value="Ghotki">Ghotki</option>
+                                                                <option value="Gojra">Gojra</option>
+                                                                <option value="Gujranwala">Gujranwala</option>
+                                                                <option value="GujranwalaCantonment">Gujranwala Cantonment</option>
+                                                                <option value="Gujrat">Gujrat</option>
+                                                                <option value="Hafizabad">Hafizabad</option>
+                                                                <option value="Haroonabad">Haroonabad</option>
+                                                                <option value="Hasilpur">Hasilpur</option>
+                                                                <option value="Hub">Hub</option>
+                                                                <option value="Hyderabad">Hyderabad</option>
+                                                                <option value="Islamabad">Islamabad</option>
+                                                                <option value="Jacobabad">Jacobabad</option>
+                                                                <option value="Jaranwala">Jaranwala</option>
+                                                                <option value="Jhang">Jhang</option>
+                                                                <option value="Jhelum">Jhelum</option>
+                                                                <option value="Kabal">Kabal</option>
+                                                                <option value="Kamalia">Kamalia</option>
+                                                                <option value="KamberAliKhan">Kamber Ali Khan</option>
+                                                                <option value="Kandhkot">Kandhkot</option>
+                                                                <option value="Kasur">Kasur</option>
+                                                                <option value="Khairpur">Khairpur</option>
+                                                                <option value="Khanewal">Khanewal</option>
+                                                                <option value="Khanpur">Khanpur</option>
+                                                                <option value="Khuzdar">Khuzdar</option>
+                                                                <option value="Kohat">Kohat</option>
+                                                                <option value="KotAbdulMalik">Kot Abdul Malik</option>
+                                                                <option value="KotAddu">Kot Addu</option>
+                                                                <option value="Kotri">Kotri</option>
+                                                                <option value="Lahore">Lahore</option>
+                                                                <option value="Larkana">Larkana</option>
+                                                                <option value="Layyah">Layyah</option>
+                                                                <option value="Lodhran">Lodhran</option>
+                                                                <option value="MandiBahauddin">Mandi Bahauddin</option>
+                                                                <option value="Mansehra">Mansehra</option>
+                                                                <option value="Mardan">Mardan</option>
+                                                                <option value="Mianwali">Mianwali</option>
+                                                                <option value="Mirpur">Mirpur</option>
+                                                                <option value="MirpurKhas">Mirpur Khas</option>
+                                                                <option value="MirpurMathelo">Mirpur Mathelo</option>
+                                                                <option value="Mingora">Mingora</option>
+                                                                <option value="Muridke">Muridke</option>
+                                                                <option value="Multan">Multan</option>
+                                                                <option value="Muridke">Muridke</option>
+                                                                <option value="Muzaffarabad">Muzaffarabad</option>
+                                                                <option value="Muzaffargarh">Muzaffargarh</option>
+                                                                <option value="Narowal">Narowal</option>
+                                                                <option value="Nawabshah">Nawabshah</option>
+                                                                <option value="Nowshera">Nowshera</option>
+                                                                <option value="Okara">Okara</option>
+                                                                <option value="Pakpattan">Pakpattan</option>
+                                                                <option value="RahimYarKhan">Rahim Yar Khan</option>
+                                                                <option value="Rawalpindi">Rawalpindi</option>
+                                                                <option value="Sadiqabad">Sadiqabad</option>
+                                                                <option value="Sahiwal">Sahiwal</option>
+                                                                <option value="Samundri">Samundri</option>
+                                                                <option value="Sargodha">Sargodha</option>
+                                                                <option value="Sheikhupura">Sheikhupura</option>
+                                                                <option value="Shikarpur">Shikarpur</option>
+                                                                <option value="Sialkot">Sialkot</option>
+                                                                <option value="Sukkur">Sukkur</option>
+                                                                <option value="Swabi">Swabi</option>
+                                                                <option value="Talagang">Talagang</option>
+                                                                <option value="TandoAdam">Tando Adam</option>
+                                                                <option value="TandoAllahyar">Tando Allahyar</option>
+                                                                <option value="TandoMuhammadKhan">Tando Muhammad Khan</option>
+                                                                <option value="Taxila">Taxila</option>
+                                                                <option value="Vehari">Vehari</option>
+                                                                <option value="WahCantonment">Wah Cantonment</option>
+                                                                <option value="Wazirabad">Wazirabad</option>
                                                                 <!-- <option>UAE</option> -->
                                                             </select>
                                                         </div>
@@ -369,8 +454,8 @@ if (isset($_POST["submit"])) {
                                                         <option>Ocean Freight</option>
                                                         <option>Drayage</option>
                                                         <!-- <option>3000in</option>
-                                                        <option>3500in</option>
-                                                        <option>4000in</option> -->
+                                                            <option>3500in</option>
+                                                            <option>4000in</option> -->
                                                     </select>
                                                 </div>
                                                 <div class="single-shipping-details-box shipping-product">
@@ -395,39 +480,6 @@ if (isset($_POST["submit"])) {
                                         </a>
                                     </div>
                                 </div>
-                                <!-- <div class="single-setup" id="step-3">
-                                    <div class="fare-rate-tab-content">
-                                        <div class="modal-shipping-details">
-                                            <div class="modal-shipping-title">
-                                                <h2>tracking <span>information</span></h2>
-                                            </div>
-                                            <div class="f-left pr-20">
-                                                <div class="shipping-details-info shipping-tracking-info">
-                                                    <div class="modal-tracking-info">
-                                                        <label for="invoice-id">invoice Id</label>
-                                                        <input name="tid" type="text" id="invoice-id" placeholder="Enter Your Id">
-                                                    </div>
-                                                    <div class="modal-tracking-info">
-                                                        <label>Search invoice</label>
-                                                        <button name="track" type="submit" class="btn nextBtn-2 btn-success">find your
-                                                            product</button>
-                                                    </div>
-                                                </div>
-                                                <div class="tracking-quots-board">
-                                                    <label>Details</label>
-                                                    <div class="tracking-quots-board-info">
-                                                        <img src="img/bg/board_bg.jpg" alt="img">
-                                                        <h5></h5>
-
-                                                    </div>
-                                                </div>
-                                            </div>
-                                             <div class="tracking-modal-map">
-                                                <div id="contact-map"></div>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                </div> -->
                             </form>
                         </div>
                     </div>
@@ -450,12 +502,12 @@ if (isset($_POST["submit"])) {
                                 <div class="s-slider-content t-slider-content text-center">
                                     <h6 data-animation="fadeInUp" data-delay=".2s"><span class="dots"></span>logistics
                                         cargo service<span class="dots2"></span></h6>
-                                    <h2 data-animation="fadeInUp" data-delay=".4s">Consolidation & Deconsolidation</h2>
+                                    <h2 data-animation="fadeInUp" data-delay=".4s">LCL & FCL</h2>
                                     <p data-animation="fadeInUp" data-delay=".6s">Logistics is generally the detailed
                                         organization and implementation of a complex tiona general business sense,
                                         logistics
                                         is the management</p>
-                                    <a href="#" class="btn red-btn " data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get Fare Rate</a>
+                                    <a href="support.php" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-animation="fadeInUp">Contact US</a>
                                 </div>
                             </div>
                         </div>
@@ -473,7 +525,7 @@ if (isset($_POST["submit"])) {
                                         organization and implementation of a complex tiona general business sense,
                                         logistics
                                         is the management</p>
-                                    <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get Fare Rate</a>
+                                    <a href="support.php" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-animation="fadeInUp">Contact US</a>
                                 </div>
                             </div>
                         </div>
@@ -491,7 +543,7 @@ if (isset($_POST["submit"])) {
                                         organization and implementation of a complex tiona general business sense,
                                         logistics
                                         is the management</p>
-                                    <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get Fare Rate</a>
+                                    <a href="support.php" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-animation="fadeInUp">Contact US</a>
                                 </div>
                             </div>
                         </div>
@@ -500,60 +552,6 @@ if (isset($_POST["submit"])) {
             </div>
         </section>
         <!-- slider-area-end -->
-
-        <!-- category-area -->
-        <!-- <section class="t-category-area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="s-single-cat t-single-cat">
-                            <div class="s-cat-icon">
-                                <i class="flaticon-cruise"></i>
-                            </div>
-                            <div class="s-cat-content">
-                                <h5><a href="#">Sea Freight</a></h5>
-                                <p>Expres delivery an innovative service is logistics</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="s-single-cat t-single-cat">
-                            <div class="s-cat-icon">
-                                <i class="flaticon-air-freight"></i>
-                            </div>
-                            <div class="s-cat-content">
-                                <h5><a href="#">Air Freight</a></h5>
-                                <p>Expres delivery an innovative service is logistics</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="s-single-cat t-single-cat">
-                            <div class="s-cat-icon">
-                                <i class="flaticon-delivery-1"></i>
-                            </div>
-                            <div class="s-cat-content">
-                                <h5><a href="#">Insurance</a></h5>
-                                <p>Expres delivery an innovative service is logistics</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="s-single-cat t-single-cat">
-                            <div class="s-cat-icon">
-                                <i class="flaticon-package"></i>
-                            </div>
-                            <div class="s-cat-content">
-                                <h5><a href="#">Forwarding</a></h5>
-                                <p>Expres delivery an innovative service is logistics</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- category-area-end -->
-
 
         <!-- choose-area -->
         <section class="choose-area pt-110 pb-80">
@@ -576,12 +574,12 @@ if (isset($_POST["submit"])) {
                                     <div class="choose-icon mb-25">
                                         <img src="img/icon/choose_img01.png" alt="img">
                                     </div>
-                                    <h3><a href="#">Express delivery innovative cargo service</a></h3>
+                                    <h3><a href="#">Air Freight</a></h3>
                                 </div>
                                 <div class="choose-content">
                                     <p>Express delivery inno service effective logistics solutio for delivery of small
                                         cargo delivery service.</p>
-                                    <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a>
+                                    <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -591,12 +589,12 @@ if (isset($_POST["submit"])) {
                                     <div class="choose-icon mb-25">
                                         <img src="img/icon/choose_img02.png" alt="img">
                                     </div>
-                                    <h3><a href="#">Logistics scale transport innovative</a></h3>
+                                    <h3><a href="#">Ocean Freight</a></h3>
                                 </div>
                                 <div class="choose-content">
                                     <p>Express delivery inno service effective logistics solutio for delivery of small
                                         cargo delivery service.</p>
-                                    <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a>
+                                    <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -606,12 +604,12 @@ if (isset($_POST["submit"])) {
                                     <div class="choose-icon mb-25">
                                         <img src="img/icon/choose_img03.png" alt="img">
                                     </div>
-                                    <h3><a href="#">Help transportation and logistics companies</a></h3>
+                                    <h3><a href="#">Consolidation</a></h3>
                                 </div>
                                 <div class="choose-content">
                                     <p>Express delivery inno service effective logistics solutio for delivery of small
                                         cargo delivery service.</p>
-                                    <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a>
+                                    <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -621,12 +619,12 @@ if (isset($_POST["submit"])) {
                                     <div class="choose-icon mb-25">
                                         <img src="img/icon/choose_img04.png" alt="img">
                                     </div>
-                                    <h3><a href="#">Supply chain management takes cargo</a></h3>
+                                    <h3><a href="#">Deconsolidation</a></h3>
                                 </div>
                                 <div class="choose-content">
                                     <p>Express delivery inno service effective logistics solutio for delivery of small
                                         cargo delivery service.</p>
-                                    <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a>
+                                    <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -636,12 +634,12 @@ if (isset($_POST["submit"])) {
                                     <div class="choose-icon mb-25">
                                         <img src="img/icon/choose_img05.png" alt="img">
                                     </div>
-                                    <h3><a href="#">World´s biggest trade show for logistics</a></h3>
+                                    <h3><a href="Drayage.php">Drayage</a></h3>
                                 </div>
                                 <div class="choose-content">
                                     <p>Express delivery inno service effective logistics solutio for delivery of small
                                         cargo delivery service.</p>
-                                    <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a>
+                                    <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -651,12 +649,12 @@ if (isset($_POST["submit"])) {
                                     <div class="choose-icon mb-25">
                                         <img src="img/icon/choose_img06.png" alt="img">
                                     </div>
-                                    <h3><a href="#">Logistics supply chain management</a></h3>
+                                    <h3><a href="#">End to End Logistics</a></h3>
                                 </div>
                                 <div class="choose-content">
                                     <p>Express delivery inno service effective logistics solutio for delivery of small
                                         cargo delivery service.</p>
-                                    <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a>
+                                    <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
                         </div>
@@ -697,7 +695,7 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="#">Anywhere Shipping</a></h3>
                                     <p>Express delivery is an innovativ service is effective logistics solutio for
                                         delivery of small cargo service.</p>
-                                    <a href="#" class="btn red-btn">LET US HELP</a>
+                                    <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
                         </div>
@@ -711,14 +709,14 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="#">Get Insights Inspiration</a></h3>
                                     <p>Express delivery is an innovativ service is effective logistics solutio for
                                         delivery of small cargo service.</p>
-                                    <a href="#" class="btn red-btn">LET US HELP</a>
+                                    <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="s-single-services mb-50">
                                 <div class="services-thumb mb-25">
-                                    <a href="#"><img src="img/images/s_services_img03.jpg" alt="img"></a>
+                                    <a href="support.php"><img src="img/images/s_services_img03.jpg" alt="img"></a>
                                 </div>
                                 <div class="s-services-content">
                                     <h6>Discover Locations</h6>
@@ -751,7 +749,7 @@ if (isset($_POST["submit"])) {
                                 <p>Express delivery is an innovative service is effective logistics solution for the
                                     delivery of small cargo. This service
                                     is useful for companies of various effective logistics scale.</p>
-                                <a href="#" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-toggle="modal" data-target="#exampleModalLong" data-animation="fadeInUp">Get
+                                <a href="support.php" class="btn red-btn">Get
                                     Fare Rate</a>
                             </div>
                         </div>
@@ -762,430 +760,8 @@ if (isset($_POST["submit"])) {
         </section>
         <!-- services-area-end -->
 
-        <!-- video-area -->
-        <!-- <section class="video-area video-bg">
-            <div class="container">
-                <div class="video-overlay s-video-overlay">
-                    <div class="row align-items-center">
-                        <div class="col-xl-5 col-lg-8 order-2 order-lg-0">
-                            <div class="video-title">
-                                <span>Our Chalanges</span>
-                                <h2><span>never</span> break our promise</h2>
-                                <a href="#">more services<span></span></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3">
-                            <div class="video-play">
-                                <a href="https://www.youtube.com/watch?v=iWKu6WNFf9M" class="popup-video"><img
-                                        src="img/icon/play_btn.png" alt="img"></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- video-area-end -->
 
 
-        <!-- section-area -->
-        <!-- <section class="area-wrapper black-bg position-relative pt-115 pb-120">
-            <div class="area-wrap-bg"></div>
-            <div class="testimonial-map-bg"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="testimonial-area">
-                            <div class="section-title white-title mb-55">
-                                <h6>Happy Customer Quotes</h6>
-                                <h2>Our Top Reviews</h2>
-                            </div>
-                            <div class="testimonial-active">
-                                <div class="single-testimonial">
-                                    <div class="testimonial-cat mb-30">
-                                        <h5>Shipping Cargo</h5>
-                                        <div class="testimonial-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-content mb-45">
-                                        <p>“ Express delivery is an innovative service is effective logistics solution
-                                            for the delivery of small cargo. This
-                                            service is useful companied various effective logistics scala ”</p>
-                                    </div>
-                                    <div class="testimonial-avatar">
-                                        <div class="testi-avatar-img">
-                                            <img src="img/images/testi_avatar01.png" alt="img">
-                                        </div>
-                                        <div class="testi-avatar-info">
-                                            <h6>Tonoy Alexander</h6>
-                                            <span>Founder Cargo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="single-testimonial">
-                                    <div class="testimonial-cat mb-30">
-                                        <h5>Air Freight</h5>
-                                        <div class="testimonial-rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-content mb-45">
-                                        <p>“ Express delivery is an innovative service is effective logistics solution
-                                            for the delivery of small cargo. This
-                                            service is useful companied various effective logistics scala ”</p>
-                                    </div>
-                                    <div class="testimonial-avatar">
-                                        <div class="testi-avatar-img">
-                                            <img src="img/images/testi_avatar02.png" alt="img">
-                                        </div>
-                                        <div class="testi-avatar-info">
-                                            <h6>Lanu Dexander</h6>
-                                            <span>Founder Cargo</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="cta-area cta-pl">
-                            <div class="section-title white-title mb-60">
-                                <h6>Clients Trust Us</h6>
-                                <h2>Cargo Request Quote</h2>
-                            </div>
-                            <div class="cta-from">
-                                <form action="#">
-                                    <div class="cta-form-col d-flex justify-content-between">
-                                        <select class="custom-select">
-                                            <option selected="">Select Service</option>
-                                            <option>Air Freight</option>
-                                            <option>Shipping Cargo</option>
-                                            <option>Rail Cargo</option>
-                                            <option>Warehousing</option>
-                                        </select>
-                                        <input type="text" placeholder="Length cm">
-                                        <input type="text" placeholder="Hight cm">
-                                    </div>
-                                    <div class="cta-form-col d-flex justify-content-between">
-                                        <select class="custom-select">
-                                            <option selected="">From Country</option>
-                                            <option value="United States">United States</option>
-                                            <option value="United Kingdom">United Kingdom</option>
-                                            <option value="Afghanistan">Afghanistan</option>
-                                            <option value="Albania">Albania</option>
-                                            <option value="Algeria">Algeria</option>
-                                            <option value="American Samoa">American Samoa</option>
-                                            <option value="Andorra">Andorra</option>
-                                            <option value="Angola">Angola</option>
-                                            <option value="Anguilla">Anguilla</option>
-                                            <option value="Antarctica">Antarctica</option>
-                                            <option value="Antigua and Barbuda">Antigua and Barbuda</option>
-                                            <option value="Argentina">Argentina</option>
-                                            <option value="Armenia">Armenia</option>
-                                            <option value="Aruba">Aruba</option>
-                                            <option value="Australia">Australia</option>
-                                            <option value="Austria">Austria</option>
-                                            <option value="Azerbaijan">Azerbaijan</option>
-                                            <option value="Bahamas">Bahamas</option>
-                                            <option value="Bahrain">Bahrain</option>
-                                            <option value="Bangladesh">Bangladesh</option>
-                                            <option value="Barbados">Barbados</option>
-                                            <option value="Belarus">Belarus</option>
-                                            <option value="Belgium">Belgium</option>
-                                            <option value="Belize">Belize</option>
-                                            <option value="Benin">Benin</option>
-                                            <option value="Bermuda">Bermuda</option>
-                                            <option value="Bhutan">Bhutan</option>
-                                            <option value="Bolivia">Bolivia</option>
-                                        </select>
-                                        <select class="custom-select">
-                                            <option selected="">To Country</option>
-                                            <option value="Iceland">Iceland</option>
-                                            <option value="India">India</option>
-                                            <option value="Indonesia">Indonesia</option>
-                                            <option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
-                                            <option value="Iraq">Iraq</option>
-                                            <option value="Ireland">Ireland</option>
-                                            <option value="Israel">Israel</option>
-                                            <option value="Italy">Italy</option>
-                                            <option value="Jamaica">Jamaica</option>
-                                            <option value="Japan">Japan</option>
-                                            <option value="Jordan">Jordan</option>
-                                            <option value="Kazakhstan">Kazakhstan</option>
-                                            <option value="Kenya">Kenya</option>
-                                            <option value="Kiribati">Kiribati</option>
-                                            <option value="Korea, Republic of">Korea, Republic of</option>
-                                            <option value="Kuwait">Kuwait</option>
-                                            <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                            <option value="Latvia">Latvia</option>
-                                            <option value="Lebanon">Lebanon</option>
-                                            <option value="Lesotho">Lesotho</option>
-                                            <option value="Liberia">Liberia</option>
-                                        </select>
-                                    </div>
-                                    <div class="cta-form-col d-flex justify-content-between">
-                                        <select class="custom-select">
-                                            <option selected="">Weight kg</option>
-                                            <option>100Kg</option>
-                                            <option>200Kg</option>
-                                            <option>300Kg</option>
-                                            <option>400Kg</option>
-                                            <option>500Kg</option>
-                                            <option>600Kg</option>
-                                            <option>700Kg</option>
-                                        </select>
-                                        <input class="cta-email" type="email" placeholder="Email ID">
-                                    </div>
-                                    <h4 class="extra-services"><i class="fas fa-binoculars"></i>Extra Service</h4>
-                                    <ul>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                <label class="custom-control-label" for="customCheck1">Air
-                                                    Freight</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                <label class="custom-control-label" for="customCheck2">Shipping
-                                                    Cargo</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                <label class="custom-control-label" for="customCheck3">Rail
-                                                    Cargo</label>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                <label class="custom-control-label"
-                                                    for="customCheck4">Warehousing</label>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <button class="btn">comparison</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- section-area-end -->
-
-        <!-- rating-area -->
-        <!-- <section class="rating-area pt-110 pb-50">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-7 col-lg-10">
-                        <div class="s-section-title text-center mb-80">
-                            <h2>What customers are thinking?</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="rating-wrap">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="single-customer-rating mb-70">
-                                <div class="customer-rating-top">
-                                    <div class="customer-thumb">
-                                        <a href="#"><img src="img/images/rating_logo.jpg" alt="img"></a>
-                                        <div class="rating-info">
-                                            <h6>Overall Rating</h6>
-                                            <div class="raising-star mb-15">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                            <h3>3.5</h3>
-                                        </div>
-                                        <span>based on 3458 ratings</span>
-                                    </div>
-                                </div>
-                                <div class="rating-list">
-                                    <ul>
-                                        <li>
-                                            On Time Delivery
-                                            <span>3.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Delivery experience
-                                            <span>4.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="single-customer-rating mb-70">
-                                <div class="customer-rating-top">
-                                    <div class="customer-thumb">
-                                        <a href="#"><img src="img/images/rating_logo03.jpg" alt="img"></a>
-                                        <div class="rating-info">
-                                            <h6>Overall Rating</h6>
-                                            <div class="raising-star mb-15">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                            <h3>3.5</h3>
-                                        </div>
-                                        <span>based on 3458 ratings</span>
-                                    </div>
-                                </div>
-                                <div class="rating-list">
-                                    <ul>
-                                        <li>
-                                            On Time Delivery
-                                            <span>3.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Delivery experience
-                                            <span>4.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="single-customer-rating mb-70">
-                                <div class="customer-rating-top">
-                                    <div class="customer-thumb">
-                                        <a href="#"><img src="img/images/rating_logo02.jpg" alt="img"></a>
-                                        <div class="rating-info">
-                                            <h6>Overall Rating</h6>
-                                            <div class="raising-star mb-15">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                            <h3>3.5</h3>
-                                        </div>
-                                        <span>based on 3458 ratings</span>
-                                    </div>
-                                </div>
-                                <div class="rating-list">
-                                    <ul>
-                                        <li>
-                                            On Time Delivery
-                                            <span>3.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Delivery experience
-                                            <span>4.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="single-customer-rating mb-70">
-                                <div class="customer-rating-top">
-                                    <div class="customer-thumb">
-                                        <a href="#"><img src="img/images/rating_logo04.jpg" alt="img"></a>
-                                        <div class="rating-info">
-                                            <h6>Overall Rating</h6>
-                                            <div class="raising-star mb-15">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                            <h3>3.5</h3>
-                                        </div>
-                                        <span>based on 3458 ratings</span>
-                                    </div>
-                                </div>
-                                <div class="rating-list">
-                                    <ul>
-                                        <li>
-                                            On Time Delivery
-                                            <span>3.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Delivery experience
-                                            <span>4.5</span>
-                                            <div class="raising-star">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                                <i class="fas fa-star-half-alt"></i>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- rating-area-end -->
         <!-- delivery-services -->
         <section class="delivery-services position-relative fix pt-110">
             <div class="overlay-title paroller" data-paroller-factor="0.15" data-paroller-factor-lg="0.15" data-paroller-factor-md="0.15" data-paroller-factor-sm="0.15" data-paroller-type="foreground" data-paroller-direction="horizontal">service</div>
@@ -1379,34 +955,6 @@ if (isset($_POST["submit"])) {
         </div>
         <!-- brand-area-end -->
 
-        <!-- newsletter -->
-        <!-- <section class="newsletter-area gray-bg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="newsletter-wrap">
-                            <div class="row">
-                                <div class="col-lg-5">
-                                    <div class="newsletter-content">
-                                        <h4>Newsletter Sign Up</h4>
-                                        <span>Notifications our best deals...</span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-7">
-                                    <div class="newsletter-form">
-                                        <form action="#">
-                                            <input type="email" placeholder="Enter your email...">
-                                            <button class="btn">subscribe</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- newsletter-end -->
 
     </main>
     <!-- main-area-end -->
@@ -1419,7 +967,7 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="footer-logo mb-35">
-                                <a href="index.html"><img src="img/logo/w_logo.png" alt="img"></a>
+                                <a href="index.php"><img src="img/logo/wlogo.png" alt="img"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Orem Ipsum is simply dumm text the printing and types indstr sum has been the
@@ -1436,7 +984,7 @@ if (isset($_POST["submit"])) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
+                    <!-- <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
                                 <h5>RECENT POSTS</h5>
@@ -1464,7 +1012,7 @@ if (isset($_POST["submit"])) {
                                 </ul>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
@@ -1472,11 +1020,11 @@ if (isset($_POST["submit"])) {
                             </div>
                             <div class="fw-link">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> About us</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Delivery Information</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Terms & Conditions</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Refund Policy</a></li>
+                                    <li><a href="about-us.php"><i class="fas fa-caret-right"></i> About us</a></li>
+                                    <li><a href="Air Freight.php"><i class="fas fa-caret-right"></i> Air Freight</a></li>
+                                    <li><a href="Ocean Freight.php"><i class="fas fa-caret-right"></i> Ocean Freight</a></li>
+                                    <li><a href="Drayage.php"><i class="fas fa-caret-right"></i> Drayage</a></li>
+                                    <li><a href="support.php"><i class="fas fa-caret-right"></i> Support</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1490,8 +1038,8 @@ if (isset($_POST["submit"])) {
                                 <p>Lorem ipsum dolor sit amet, consy eetur adipisc de elit. Quisque act raqum nunc no
                                     dolor
                                 </p>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a>
+                                <!-- <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
+                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a> -->
                             </div>
                         </div>
                     </div>

@@ -125,8 +125,8 @@ if (isset($_POST["submit"])) {
                 <div class="row align-items-center">
                     <div class="col-lg-3 col-md-6">
                         <div class="logo">
-                            <a href="index.php"><img src="img/logo/wlogo.png" class="mobile-logo logo-sticky-none" alt="Logo"></a>
-                            <a href="index.php"><img src="img/logo/logo2.png" class="mobile-logo s-logo-none" alt="Logo"></a>
+                            <a href="index.php"><img src="img/logo/s_logo.png" class="mobile-logo logo-sticky-none" alt="Logo"></a>
+                            <a href="index.php"><img src="img/logo/logo.png" class="mobile-logo s-logo-none" alt="Logo"></a>
                         </div>
                     </div>
                     <div class="col-lg-9 col-md-6 d-none d-md-block">
@@ -134,22 +134,23 @@ if (isset($_POST["submit"])) {
                             <div class="main-menu">
                                 <nav id="mobile-menu">
                                     <ul>
-                                        <li><a href="index.php">Home</a>
+                                        <li class="active"><a href="index.php">Home</a>
                                             <!-- <ul class="submenu">
                                                         <li><a href="index.php">Home One</a></li>
                                                         <li class="active"><a href="index-2.html">Home Two</a></li>
                                                         <li><a href="index-3.html">Home Three</a></li>
                                                     </ul> -->
                                         </li>
-                                        <li><a href="about-us.php">About Us</a></li>
-                                        <li class="active"><a href="tracking.php">Tracking</a></li>
+                                        <li><a href="about-us.html">About Us</a></li>
+                                        <li><a href="tracking.html">Tracking</a></li>
                                         <li><a href="#">Services</a>
                                             <ul class="submenu">
                                                 <li>
-                                                <li><a href="Air Freight.php">Air Freight</a></li>
-                                                <li><a href="Ocean Freight.php">Ocean Freight</a></li>
-                                                <li><a href="Drayage.php">Drayage</a></li>
-                                                <li><a href="Custom Brokerage.php">Custom Brokerage</a></li>
+                                                <li><a href="service-air.html">Services Air</a></li>
+                                                <li><a href="service-Railway.html">Services Railway</a></li>
+                                                <li><a href="service-door-to-door.html">Services Door to
+                                                        Door</a></li>
+                                                <li><a href="service-warehouse.html">Services warehouse</a></li>
                                                 <ul class="submenu">
 
                                                 </ul>
@@ -165,13 +166,13 @@ if (isset($_POST["submit"])) {
                                                     <li><a href="blog-details.html">Blog Details</a></li>
                                                 </ul>
                                             </li> -->
-                                    <li><a href="support.php">Support</a></li>
+                                    <li><a href="support.html">Support</a></li>
                                     </ul>
                                 </nav>
                             </div>
-                            <!-- <div class="header-search">
+                            <div class="header-search">
                                 <a href="#" data-toggle="modal" data-target="#search-modal"><i class="flaticon-magnifying-glass"></i></a>
-                            </div> -->
+                            </div>
                             <div class="header-btn">
                                 <a href="#" class="btn" data-toggle="modal" data-target="#exampleModalLong"><img src="img/icon/calculator-symbols.png" alt="icon">Get Fare Rate</a>
                             </div>
@@ -182,16 +183,16 @@ if (isset($_POST["submit"])) {
                     </div>
                 </div>
                 <!-- Modal Search -->
-                <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <form>
-                                <input type="text" placeholder="Search here...">
-                                <button><i class="fa fa-search"></i></button>
-                            </form>
+                <!-- <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <input type="text" placeholder="Search here...">
+                                    <button><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </div> -->
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -223,62 +224,13 @@ if (isset($_POST["submit"])) {
                                                                     placeholder="Select Your Destination"> -->
 
                                                             <select name="fromcountry" type="text" required="required" id="from-country" placeholder="Select Your Destination" class="custom-select">
-                                                                <option selected="">Alabama</option>
-                                                                <option value="Alabama">Alabama</option>
-                                                                <option value="Alaska">Alaska</option>
-                                                                <option value="Arizona">Arizona</option>
-                                                                <option value="Arkansas">Arkansas</option>
-                                                                <option value="California">California</option>
-                                                                <option value="Colorado">Colorado</option>
-                                                                <option value="Connecticut">Connecticut</option>
-                                                                <option value="Delaware">Delaware</option>
-                                                                <option value="Florida">Florida</option>
-                                                                <option value="Georgia">Georgia</option>
-                                                                <option value="Hawaii">Hawaii</option>
-                                                                <option value="Idaho">Idaho</option>
-                                                                <option value="Illinois">Illinois</option>
-                                                                <option value="Indiana">Indiana</option>
-                                                                <option value="Iowa">Iowa</option>
-                                                                <option value="Kansas">Kansas</option>
-                                                                <option value="Kentucky">Kentucky</option>
-                                                                <option value="Louisiana">Louisiana</option>
-                                                                <option value="Maine">Maine</option>
-                                                                <option value="Maryland">Maryland</option>
-                                                                <option value="Massachusetts">Massachusetts</option>
-                                                                <option value="Michigan">Michigan</option>
-                                                                <option value="Minnesota">Minnesota</option>
-                                                                <option value="Mississippi">Mississippi</option>
-                                                                <option value="Missouri">Missouri</option>
-                                                                <option value="Montana">Montana</option>
-                                                                <option value="Nebraska">Nebraska</option>
-                                                                <option value="Nevada">Nevada</option>
-                                                                <option value="New Hampshire">New Hampshire</option>
-                                                                <option value="New Jersey">New Jersey</option>
-                                                                <option value="New Mexico">New Mexico</option>
-                                                                <option value="New York">New York</option>
-                                                                <option value="North Carolina">North Carolina</option>
-                                                                <option value="North Dakota">North Dakota</option>
-                                                                <option value="Ohio">Ohio</option>
-                                                                <option value="Oklahoma">Oklahoma</option>
-                                                                <option value="Oregon">Oregon</option>
-                                                                <option value="Pennsylvania">Pennsylvania</option>
-                                                                <option value="Rhode Island">Rhode Island</option>
-                                                                <option value="South Carolina">South Carolina</option>
-                                                                <option value="South Dakota">South Dakota</option>
-                                                                <option value="Tennessee">Tennessee</option>
-                                                                <option value="Texas">Texas</option>
-                                                                <option value="Utah">Utah</option>
-                                                                <option value="Vermont">Vermont</option>
-                                                                <option value="Virginia">Virginia</option>
-                                                                <option value="Washington">Washington</option>
-                                                                <option value="West Virginia">West Virginia</option>
-                                                                <option value="Wisconsin">Wisconsin</option>
-                                                                <option value="Wyoming">Wyoming</option>
+                                                                <option selected="">USA</option>
+                                                                <option>USA</option>
                                                             </select>
                                                         </div>
                                                         <div class="shipping-address-box form-group">
                                                             <label for="from-country-location">add your location</label>
-                                                            <input name="fromaddress" type="text" required="required" id="from-country-location" placeholder="Your pickup Address">
+                                                            <input name="fromaddress" type="text" required="required" id="from-country-location" placeholder="Select Your Destination">
                                                         </div>
                                                     </div>
                                                 </li>
@@ -292,98 +244,9 @@ if (isset($_POST["submit"])) {
                                                             <!-- <input type="text" required="required" id="to-country"
                                                                     placeholder="Select Your Destination"> -->
 
-                                                            <select name="tocountry" type="text" required="required" id="to-country" placeholder="Your Destination Address" class="custom-select">
-                                                                <option selected="">Abbottabad</option>
-                                                                <option value="Abbottabad">Abbottabad</option>
-                                                                <option value="AhmedpurEast">Ahmedpur East</option>
-                                                                <option value="ArifWala">Arif Wala</option>
-                                                                <option value="Attock">Attock</option>
-                                                                <option value="Bahawalnagar">Bahawalnagar</option>
-                                                                <option value="Bahawalpur">Bahawalpur</option>
-                                                                <option value="Badin">Badin</option>
-                                                                <option value="Bhalwal">Bhalwal</option>
-                                                                <option value="Bhakkar">Bhakkar</option>
-                                                                <option value="Burewala">Burewala</option>
-                                                                <option value="Charsadda">Charsadda</option>
-                                                                <option value="Chakwal">Chakwal</option>
-                                                                <option value="Chaman">Chaman</option>
-                                                                <option value="Chiniot">Chiniot</option>
-                                                                <option value="Chishtian">Chishtian</option>
-                                                                <option value="Dadu">Dadu</option>
-                                                                <option value="Daharki">Daharki</option>
-                                                                <option value="DeraGhaziKhan">Dera Ghazi Khan</option>
-                                                                <option value="DeraIsmailKhan">Dera Ismail Khan</option>
-                                                                <option value="Faisalabad">Faisalabad</option>
-                                                                <option value="Ferozwala">Ferozwala</option>
-                                                                <option value="Ghotki">Ghotki</option>
-                                                                <option value="Gojra">Gojra</option>
-                                                                <option value="Gujranwala">Gujranwala</option>
-                                                                <option value="GujranwalaCantonment">Gujranwala Cantonment</option>
-                                                                <option value="Gujrat">Gujrat</option>
-                                                                <option value="Hafizabad">Hafizabad</option>
-                                                                <option value="Haroonabad">Haroonabad</option>
-                                                                <option value="Hasilpur">Hasilpur</option>
-                                                                <option value="Hub">Hub</option>
-                                                                <option value="Hyderabad">Hyderabad</option>
-                                                                <option value="Islamabad">Islamabad</option>
-                                                                <option value="Jacobabad">Jacobabad</option>
-                                                                <option value="Jaranwala">Jaranwala</option>
-                                                                <option value="Jhang">Jhang</option>
-                                                                <option value="Jhelum">Jhelum</option>
-                                                                <option value="Kabal">Kabal</option>
-                                                                <option value="Kamalia">Kamalia</option>
-                                                                <option value="KamberAliKhan">Kamber Ali Khan</option>
-                                                                <option value="Kandhkot">Kandhkot</option>
-                                                                <option value="Kasur">Kasur</option>
-                                                                <option value="Khairpur">Khairpur</option>
-                                                                <option value="Khanewal">Khanewal</option>
-                                                                <option value="Khanpur">Khanpur</option>
-                                                                <option value="Khuzdar">Khuzdar</option>
-                                                                <option value="Kohat">Kohat</option>
-                                                                <option value="KotAbdulMalik">Kot Abdul Malik</option>
-                                                                <option value="KotAddu">Kot Addu</option>
-                                                                <option value="Kotri">Kotri</option>
-                                                                <option value="Lahore">Lahore</option>
-                                                                <option value="Larkana">Larkana</option>
-                                                                <option value="Layyah">Layyah</option>
-                                                                <option value="Lodhran">Lodhran</option>
-                                                                <option value="MandiBahauddin">Mandi Bahauddin</option>
-                                                                <option value="Mansehra">Mansehra</option>
-                                                                <option value="Mardan">Mardan</option>
-                                                                <option value="Mianwali">Mianwali</option>
-                                                                <option value="Mirpur">Mirpur</option>
-                                                                <option value="MirpurKhas">Mirpur Khas</option>
-                                                                <option value="MirpurMathelo">Mirpur Mathelo</option>
-                                                                <option value="Mingora">Mingora</option>
-                                                                <option value="Muridke">Muridke</option>
-                                                                <option value="Multan">Multan</option>
-                                                                <option value="Muridke">Muridke</option>
-                                                                <option value="Muzaffarabad">Muzaffarabad</option>
-                                                                <option value="Muzaffargarh">Muzaffargarh</option>
-                                                                <option value="Narowal">Narowal</option>
-                                                                <option value="Nawabshah">Nawabshah</option>
-                                                                <option value="Nowshera">Nowshera</option>
-                                                                <option value="Okara">Okara</option>
-                                                                <option value="Pakpattan">Pakpattan</option>
-                                                                <option value="RahimYarKhan">Rahim Yar Khan</option>
-                                                                <option value="Rawalpindi">Rawalpindi</option>
-                                                                <option value="Sadiqabad">Sadiqabad</option>
-                                                                <option value="Sahiwal">Sahiwal</option>
-                                                                <option value="Samundri">Samundri</option>
-                                                                <option value="Sargodha">Sargodha</option>
-                                                                <option value="Sheikhupura">Sheikhupura</option>
-                                                                <option value="Shikarpur">Shikarpur</option>
-                                                                <option value="Sialkot">Sialkot</option>
-                                                                <option value="Sukkur">Sukkur</option>
-                                                                <option value="Swabi">Swabi</option>
-                                                                <option value="Talagang">Talagang</option>
-                                                                <option value="TandoAdam">Tando Adam</option>
-                                                                <option value="TandoAllahyar">Tando Allahyar</option>
-                                                                <option value="TandoMuhammadKhan">Tando Muhammad Khan</option>
-                                                                <option value="Taxila">Taxila</option>
-                                                                <option value="Vehari">Vehari</option>
-                                                                <option value="WahCantonment">Wah Cantonment</option>
-                                                                <option value="Wazirabad">Wazirabad</option>
+                                                            <select name="tocountry" type="text" required="required" id="to-country" placeholder="Select Your Destination" class="custom-select">
+                                                                <option selected="">UAE</option>
+                                                                <option>PAK</option>
                                                                 <!-- <option>UAE</option> -->
                                                             </select>
                                                         </div>
@@ -525,7 +388,7 @@ if (isset($_POST["submit"])) {
     <main>
 
         <!-- breadcrumb-area -->
-        <div class="breadcrumb-area breadcrumb-bg s-breadcrumb-bg">
+        <div class="breadcrumb-area breadcrumb-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -534,11 +397,12 @@ if (isset($_POST["submit"])) {
                                 <ol class="breadcrumb">
                                     <li class="dots"></li>
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Tracking</li>
+                                    <li class="breadcrumb-item"><a href="#">pages</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Pricing</li>
                                     <li class="dots2"></li>
                                 </ol>
                             </nav>
-                            <h2>Tracking Here</h2>
+                            <h2>pricing strategy</h2>
                         </div>
                     </div>
                 </div>
@@ -546,106 +410,156 @@ if (isset($_POST["submit"])) {
         </div>
         <!-- breadcrumb-area-end -->
 
-
-
-        <!-- tracking-area -->
-        <div class="tracking-area pt-95 pb-115">
+        <!-- pricing-area -->
+        <section class="pricing-area pt-110 pb-90">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10">
-                        <div class="tracking-id-info text-center">
-                            <p>Enter Your Cargo Tracking, Door to Door Office <a href="#">Order Number.</a></p>
-                            <form action="tracking.php" class="tracking-id-form">
-                                <input name="tid" type="text" placeholder="Tracking id">
-                                <button type="submit" name="track" class="btn red-btn">Tracking</button>
-                            </form>
-                            <h5><?php
-                                require_once "config.php";
-
-                                if (isset($_REQUEST["track"])) {
-
-                                    $fc = $_REQUEST["tid"];
-
-
-                                    $sql = "SELECT status FROM inquiry WHERE ID=$fc";
-                                    $query1 = mysqli_query($connection, $sql);
-
-
-                                    if ($query1->num_rows > 0) {
-                                        while ($row = $query1->fetch_assoc()) {
-                                            echo "<span>" . $row['status'] . "</span><br>";
-                                            break;
-                                        }
-                                    } else {
-                                        echo "0 result";
-                                    }
-                                }
-                                ?></h5>
-
-
-
-                            <!-- services-area -->
-                            <section class="services-area delivery-bg inner-help-bg pt-110 pb-70">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-7 col-lg-10">
-                                            <div class="s-section-title text-center mb-60">
-                                                <h2>how we help you</h2>
-                                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                    small cargo. This service
-                                                    is useful for companies various.</p>
-                                            </div>
-                                        </div>
+                    <div class="col-xl-7 col-lg-10">
+                        <div class="s-section-title text-center mb-60">
+                            <h2>cargo logistics Plan</h2>
+                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small
+                                cargo. This service is useful for companies various.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="pricing-wrap pl-80 pr-80">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-pricing text-center mb-30">
+                                <div class="pricing-head mb-30">
+                                    <div class="pricing-icon mb-15">
+                                        <img src="img/icon/pricing_icon01.png" alt="img">
                                     </div>
-                                    <div class="services-wrapper">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="s-single-services mb-50">
-                                                    <div class="services-thumb mb-25">
-                                                        <a href="#"><img src="img/images/s_services_img01.jpg" alt="img"></a>
-                                                    </div>
-                                                    <div class="s-services-content">
-                                                        <h6>Delivery Service</h6>
-                                                        <h3><a href="#">Anywhere Shipping</a></h3>
-                                                        <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                                            small cargo service.</p>
-                                                        <a href="#" class="btn red-btn">LET US HELP</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="s-single-services mb-50">
-                                                    <div class="services-thumb mb-25">
-                                                        <a href="#"><img src="img/images/s_services_img02.jpg" alt="img"></a>
-                                                    </div>
-                                                    <div class="s-services-content">
-                                                        <h6>Inspiration Service</h6>
-                                                        <h3><a href="#">Get Insights Inspiration</a></h3>
-                                                        <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                                            small cargo service.</p>
-                                                        <a href="#" class="btn red-btn">LET US HELP</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="s-single-services mb-50">
-                                                    <div class="services-thumb mb-25">
-                                                        <a href="#"><img src="img/images/s_services_img03.jpg" alt="img"></a>
-                                                    </div>
-                                                    <div class="s-services-content">
-                                                        <h6>Discover Locations</h6>
-                                                        <h3><a href="#">Your Freight Deadlines</a></h3>
-                                                        <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                                            small cargo service.</p>
-                                                        <a href="#" class="btn red-btn">LET US HELP</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <h5>Basic <span>Limited</span></h5>
+                                    <span>Free plan</span>
+                                    <p>Subscribe Best Plans</p>
+                                    <div class="price-count">
+                                        <h4>Free License</h4>
                                     </div>
                                 </div>
-                            </section>
-                            <!-- services-area-end -->
+                                <div class="pricing-list mb-30">
+                                    <ul>
+                                        <li>Unlimited Transport Tracking</li>
+                                        <li>50kg Cargo Transport</li>
+                                        <li>Freight Charge Terms</li>
+                                        <li>24/7 support service</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-btn">
+                                    <a href="#" class="btn">Buy Now<i class="fas fa-shopping-cart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-pricing active text-center mb-30">
+                                <div class="pricing-head mb-30">
+                                    <div class="pricing-icon mb-15">
+                                        <img src="img/icon/pricing_icon02.png" alt="img">
+                                    </div>
+                                    <h5>Business <span>Limited</span></h5>
+                                    <span>monthly</span>
+                                    <p>Subscribe Best Plans</p>
+                                    <div class="price-count">
+                                        <h4>Yearly License <span>- $119</span></h4>
+                                    </div>
+                                </div>
+                                <div class="pricing-list mb-30">
+                                    <ul>
+                                        <li>Unlimited Transport Tracking</li>
+                                        <li>50kg Cargo Transport</li>
+                                        <li>Freight Charge Terms</li>
+                                        <li>24/7 support service</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-btn">
+                                    <a href="#" class="btn">Buy Now<i class="fas fa-shopping-cart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="single-pricing text-center mb-30">
+                                <div class="pricing-head mb-30">
+                                    <div class="pricing-icon mb-15">
+                                        <img src="img/icon/pricing_icon03.png" alt="img">
+                                    </div>
+                                    <h5>Basic <span>Limited</span></h5>
+                                    <span>Yearly plan</span>
+                                    <p>Subscribe Best Plans</p>
+                                    <div class="price-count">
+                                        <h4>Yearly License <span>- $219</span></h4>
+                                    </div>
+                                </div>
+                                <div class="pricing-list mb-30">
+                                    <ul>
+                                        <li>Unlimited Transport Tracking</li>
+                                        <li>50kg Cargo Transport</li>
+                                        <li>Freight Charge Terms</li>
+                                        <li>24/7 support service</li>
+                                    </ul>
+                                </div>
+                                <div class="pricing-btn">
+                                    <a href="#" class="btn">Buy Now<i class="fas fa-shopping-cart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- pricing-area-end -->
+
+        <!-- testimonial-area -->
+        <section class="testimonial-area pt-110 pb-120 testimonial-bg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-10">
+                        <div class="s-section-title text-center mb-90">
+                            <h2>client testimonial examples</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-padding-wrap">
+                    <div class="row s-testi-active">
+                        <div class="col-12">
+                            <div class="s-single-testimonial">
+                                <div class="s-testi-content">
+                                    <h5>“ The combined effects of intense industry competiti and rising transportati costs underscore
+                                        the importance of profitable freight and logistics pricing “</h5>
+                                </div>
+                                <div class="s-testi-avatar">
+                                    <div class="s-testi-avatar-img">
+                                        <img src="img/images/s_testi_avatar.png" alt="img">
+                                    </div>
+                                    <div class="s-testi-avatar-info">
+                                        <p>Thomas Alexander <span>Founder ceo</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="s-single-testimonial">
+                                <div class="s-testi-content">
+                                    <h5>“ The combined effects of intense industry competiti and rising transportati costs underscore
+                                        the importance of profitable freight and logistics pricing “</h5>
+                                </div>
+                                <div class="s-testi-avatar">
+                                    <div class="s-testi-avatar-img">
+                                        <img src="img/images/s_testi_avatar.png" alt="img">
+                                    </div>
+                                    <div class="s-testi-avatar-info">
+                                        <p>Thomas Alexander <span>Founder ceo</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s-testi-quote">
+                        <img src="img/icon/testi_quote.png" alt="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- testimonial-area-end -->
 
     </main>
     <!-- main-area-end -->

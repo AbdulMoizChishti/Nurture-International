@@ -94,8 +94,8 @@ if (isset($_POST["submit"])) {
                         E
                     </span>
                     <!-- <span data-text-preloader="K" class="letters-loading">
-                        K
-                    </span> -->
+                            K
+                        </span> -->
                 </div>
             </div>
             <div class="loader">
@@ -136,19 +136,19 @@ if (isset($_POST["submit"])) {
                                     <ul>
                                         <li><a href="index.php">Home</a>
                                             <!-- <ul class="submenu">
-                                                        <li><a href="index.php">Home One</a></li>
-                                                        <li class="active"><a href="index-2.html">Home Two</a></li>
-                                                        <li><a href="index-3.html">Home Three</a></li>
-                                                    </ul> -->
+                                                    <li><a href="index.php">Home One</a></li>
+                                                    <li class="active"><a href="index-2.html">Home Two</a></li>
+                                                    <li><a href="index-3.html">Home Three</a></li>
+                                                </ul> -->
                                         </li>
                                         <li><a href="about-us.php">About Us</a></li>
-                                        <li class="active"><a href="tracking.php">Tracking</a></li>
+                                        <li><a href="tracking.php">Tracking</a></li>
                                         <li><a href="#">Services</a>
                                             <ul class="submenu">
                                                 <li>
                                                 <li><a href="Air Freight.php">Air Freight</a></li>
                                                 <li><a href="Ocean Freight.php">Ocean Freight</a></li>
-                                                <li><a href="Drayage.php">Drayage</a></li>
+                                                <li class="active"><a href="Drayage.php">Drayage</a></li>
                                                 <li><a href="Custom Brokerage.php">Custom Brokerage</a></li>
                                                 <ul class="submenu">
 
@@ -182,16 +182,16 @@ if (isset($_POST["submit"])) {
                     </div>
                 </div>
                 <!-- Modal Search -->
-                <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <form>
-                                <input type="text" placeholder="Search here...">
-                                <button><i class="fa fa-search"></i></button>
-                            </form>
+                <!-- <div class="modal fade" id="search-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <input type="text" placeholder="Search here...">
+                                    <button><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                </div>
+                    </div> -->
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -452,9 +452,7 @@ if (isset($_POST["submit"])) {
                                                         <option>Air Freight</option>
                                                         <option>Ocean Freight</option>
                                                         <option>Drayage</option>
-                                                        <!-- <option>3000in</option>
-                                                            <option>3500in</option>
-                                                            <option>4000in</option> -->
+
                                                     </select>
                                                 </div>
                                                 <div class="single-shipping-details-box shipping-product">
@@ -479,39 +477,6 @@ if (isset($_POST["submit"])) {
                                         </a>
                                     </div>
                                 </div>
-                                <!-- <div class="single-setup" id="step-3">
-                                        <div class="fare-rate-tab-content">
-                                            <div class="modal-shipping-details">
-                                                <div class="modal-shipping-title">
-                                                    <h2>tracking <span>information</span></h2>
-                                                </div>
-                                                <div class="f-left pr-20">
-                                                    <div class="shipping-details-info shipping-tracking-info">
-                                                        <div class="modal-tracking-info">
-                                                            <label for="invoice-id">invoice Id</label>
-                                                            <input name="tid" type="text" id="invoice-id" placeholder="Enter Your Id">
-                                                        </div>
-                                                        <div class="modal-tracking-info">
-                                                            <label>Search invoice</label>
-                                                            <button name="track" type="submit" class="btn nextBtn-2 btn-success">find your
-                                                                product</button>
-                                                        </div>
-                                                    </div>
-                                                    <div class="tracking-quots-board">
-                                                        <label>Details</label>
-                                                        <div class="tracking-quots-board-info">
-                                                            <img src="img/bg/board_bg.jpg" alt="img">
-                                                            <h5></h5>
-    
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                 <div class="tracking-modal-map">
-                                                    <div id="contact-map"></div>
-                                                </div> 
-                                            </div>
-                                        </div>
-                                    </div> -->
                             </form>
                         </div>
                     </div>
@@ -534,11 +499,11 @@ if (isset($_POST["submit"])) {
                                 <ol class="breadcrumb">
                                     <li class="dots"></li>
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Tracking</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Drayage</li>
                                     <li class="dots2"></li>
                                 </ol>
                             </nav>
-                            <h2>Tracking Here</h2>
+                            <h2>Drayage</h2>
                         </div>
                     </div>
                 </div>
@@ -546,106 +511,105 @@ if (isset($_POST["submit"])) {
         </div>
         <!-- breadcrumb-area-end -->
 
-
-
-        <!-- tracking-area -->
-        <div class="tracking-area pt-95 pb-115">
+        <!-- services-details -->
+        <div class="services-details-area pt-120 pb-115">
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-xl-8 col-lg-10">
-                        <div class="tracking-id-info text-center">
-                            <p>Enter Your Cargo Tracking, Door to Door Office <a href="#">Order Number.</a></p>
-                            <form action="tracking.php" class="tracking-id-form">
-                                <input name="tid" type="text" placeholder="Tracking id">
-                                <button type="submit" name="track" class="btn red-btn">Tracking</button>
-                            </form>
-                            <h5><?php
-                                require_once "config.php";
-
-                                if (isset($_REQUEST["track"])) {
-
-                                    $fc = $_REQUEST["tid"];
-
-
-                                    $sql = "SELECT status FROM inquiry WHERE ID=$fc";
-                                    $query1 = mysqli_query($connection, $sql);
-
-
-                                    if ($query1->num_rows > 0) {
-                                        while ($row = $query1->fetch_assoc()) {
-                                            echo "<span>" . $row['status'] . "</span><br>";
-                                            break;
-                                        }
-                                    } else {
-                                        echo "0 result";
-                                    }
-                                }
-                                ?></h5>
-
-
-
-                            <!-- services-area -->
-                            <section class="services-area delivery-bg inner-help-bg pt-110 pb-70">
-                                <div class="container">
-                                    <div class="row justify-content-center">
-                                        <div class="col-xl-7 col-lg-10">
-                                            <div class="s-section-title text-center mb-60">
-                                                <h2>how we help you</h2>
-                                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                    small cargo. This service
-                                                    is useful for companies various.</p>
-                                            </div>
-                                        </div>
+                <div class="services-details-wrap">
+                    <div class="row">
+                        <div class="col-lg-4 order-2 order-lg-0">
+                            <aside class="services-sidebar">
+                                <div class="services-widget mb-40">
+                                    <div class="service-widget-title">
+                                        <h3>Service Category</h3>
                                     </div>
-                                    <div class="services-wrapper">
-                                        <div class="row">
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="s-single-services mb-50">
-                                                    <div class="services-thumb mb-25">
-                                                        <a href="#"><img src="img/images/s_services_img01.jpg" alt="img"></a>
-                                                    </div>
-                                                    <div class="s-services-content">
-                                                        <h6>Delivery Service</h6>
-                                                        <h3><a href="#">Anywhere Shipping</a></h3>
-                                                        <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                                            small cargo service.</p>
-                                                        <a href="#" class="btn red-btn">LET US HELP</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="s-single-services mb-50">
-                                                    <div class="services-thumb mb-25">
-                                                        <a href="#"><img src="img/images/s_services_img02.jpg" alt="img"></a>
-                                                    </div>
-                                                    <div class="s-services-content">
-                                                        <h6>Inspiration Service</h6>
-                                                        <h3><a href="#">Get Insights Inspiration</a></h3>
-                                                        <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                                            small cargo service.</p>
-                                                        <a href="#" class="btn red-btn">LET US HELP</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-6">
-                                                <div class="s-single-services mb-50">
-                                                    <div class="services-thumb mb-25">
-                                                        <a href="#"><img src="img/images/s_services_img03.jpg" alt="img"></a>
-                                                    </div>
-                                                    <div class="s-services-content">
-                                                        <h6>Discover Locations</h6>
-                                                        <h3><a href="#">Your Freight Deadlines</a></h3>
-                                                        <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                                            small cargo service.</p>
-                                                        <a href="#" class="btn red-btn">LET US HELP</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div class="service-cat-list">
+                                        <ul>
+                                            <!-- <li><a href="#">All Service</a></li> -->
+                                            <li><a href="Air Freight.html">Air Freight</a></li>
+                                            <li><a href="Ocean Freight.html">Ocean Freight</a></li>
+                                            <li class="active"><a href="Drayage.html">Drayage</a></li>
+                                            <li><a href="Custom Brokerage.html">Custom Brokerage</a></li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </section>
-                            <!-- services-area-end -->
+                                <div class="services-widget mb-40">
+                                    <div class="service-doc-list">
+                                        <ul>
+                                            <li><a href="#">Startesk Company Listing <i class="fas fa-file-pdf"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="services-widget mb-40">
+                                    <div class="service-sidebar-support">
+                                        <h3>Need Support?</h3>
+                                        <p>Express delivery is an innovative service is effective logies</p>
+                                        <a href="#" class="btn">contact Us</a>
+                                    </div>
+                                </div>
+                                <div class="services-widget">
+                                    <div class="service-widget-title dark-bg">
+                                        <h3>Tags Post</h3>
+                                    </div>
+                                    <div class="service-tag-list">
+                                        <ul>
+                                            <li><a href="#">Business</a></li>
+                                            <li><a href="#">Transport</a></li>
+                                            <li><a href="#">Logisticsatv</a></li>
+                                            <li><a href="#">Transportations</a></li>
+                                            <li><a href="#">Who</a></li>
+                                            <li><a href="#">Creative</a></li>
+                                            <li><a href="#">Cargos</a></li>
+                                            <li><a href="#">Delivery</a></li>
+                                            <li><a href="#">Warehouse</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </aside>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="services-details-content">
+                                <h4>How It Works?</h4>
+                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service
+                                    is useful for companies of various effective logistics scale.transport logistic is the world´s biggest trade show for
+                                    logistics, mobility, IT and supply chain management. It takes place every two years in early May, at the Messe München
+                                    exhibition center in Munich</p>
+                                <p>Logistics solution for the delivery of small cargo. This service is useful for companie various effective logistics
+                                    scale.transport logistic is the world´s biggest trade show for logistics, mobility, IT and supply chain management. It
+                                    takes place every two years.</p>
+                                <div class="services-details-img">
+                                    <img src="img/images/services_details_img02.jpg" alt="">
+                                </div>
+                                <h4>Was Our Solution Best?</h4>
+                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service
+                                    is useful for companies of various effective logistics scale.transport logistic is the world´s biggest trade show for
+                                    logistics, mobility, IT and supply chain management. It takes place every two years in early May, at the Messe München
+                                    exhibition center in Munich</p>
+                                <div class="services-details-list">
+                                    <ul>
+                                        <li><i class="fas fa-arrow-alt-circle-right"></i>Express delivery is an innovative service</li>
+                                        <li><i class="fas fa-arrow-alt-circle-right"></i>Logistics scale transport innovative</li>
+                                        <li><i class="fas fa-arrow-alt-circle-right"></i>Help transportation and logistics companies</li>
+                                    </ul>
+                                </div>
+                                <p>Logistics solution for the delivery of small cargo. This service is useful for companie various effective logistics
+                                    scale.transport logistic is the world´s biggest trade show for logistics.</p>
+                                <blockquote class="services-blockquote">
+                                    Express delivery is an innovative service is effective logistics solution for the deliver small cargo service is useful
+                                    for companies
+                                    <footer class="services-blockquote-footer">Jonso Watson</footer>
+                                </blockquote>
+                                <h4>Was Our Solution Best?</h4>
+                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service
+                                    is useful for companies of various effective logistics scale.transport logistic is the world´s biggest trade show for
+                                    logistics, mobility management.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- services-details-end -->
+
 
     </main>
     <!-- main-area-end -->
@@ -658,7 +622,7 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="footer-logo mb-35">
-                                <a href="index.php"><img src="img/logo/w_logo.png" alt="img"></a>
+                                <a href="index.php"><img src="img/logo/wlogo.png" alt="img"></a>
                             </div>
                             <div class="footer-text">
                                 <p>Orem Ipsum is simply dumm text the printing and types indstr sum has been the industry
@@ -740,7 +704,7 @@ if (isset($_POST["submit"])) {
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-7">
                         <div class="copyright-text">
-                            <p>Copyright© <span>StarTask </span> | All Rights Reserved</p>
+                            <p>Copyright© <span>Nurture Int'l LCL </span> | All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">
