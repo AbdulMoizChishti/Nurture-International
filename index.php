@@ -503,10 +503,7 @@ if (isset($_POST["submit"])) {
                                     <h6 data-animation="fadeInUp" data-delay=".2s"><span class="dots"></span>logistics
                                         cargo service<span class="dots2"></span></h6>
                                     <h2 data-animation="fadeInUp" data-delay=".4s">LCL & FCL</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s">Logistics is generally the detailed
-                                        organization and implementation of a complex tiona general business sense,
-                                        logistics
-                                        is the management</p>
+                                    <p data-animation="fadeInUp" data-delay=".6s">Logistics Excellence Beyond Boundaries</p>
                                     <a href="support.php" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-animation="fadeInUp">Contact US</a>
                                 </div>
                             </div>
@@ -521,10 +518,7 @@ if (isset($_POST["submit"])) {
                                     <h6 data-animation="fadeInUp" data-delay=".2s"><span class="dots"></span>logistics
                                         cargo service<span class="dots2"></span></h6>
                                     <h2 data-animation="fadeInUp" data-delay=".4s">Express Delivery</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s">Logistics is generally the detailed
-                                        organization and implementation of a complex tiona general business sense,
-                                        logistics
-                                        is the management</p>
+                                    <p data-animation="fadeInUp" data-delay=".6s">Logistics Excellence Beyond Boundaries</p>
                                     <a href="support.php" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-animation="fadeInUp">Contact US</a>
                                 </div>
                             </div>
@@ -539,10 +533,7 @@ if (isset($_POST["submit"])) {
                                     <h6 data-animation="fadeInUp" data-delay=".2s"><span class="dots"></span>logistics
                                         cargo service<span class="dots2"></span></h6>
                                     <h2 data-animation="fadeInUp" data-delay=".4s">End to End Logistics</h2>
-                                    <p data-animation="fadeInUp" data-delay=".6s">Logistics is generally the detailed
-                                        organization and implementation of a complex tiona general business sense,
-                                        logistics
-                                        is the management</p>
+                                    <p data-animation="fadeInUp" data-delay=".6s">Logistics Excellence Beyond Boundaries</p>
                                     <a href="support.php" class="btn red-btn" data-animation="fadeInUp" data-delay=".8s" data-animation="fadeInUp">Contact US</a>
                                 </div>
                             </div>
@@ -560,9 +551,7 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-7 col-lg-10">
                         <div class="s-section-title text-center mb-60">
                             <h2>Why should you choose us?</h2>
-                            <p>Express delivery is an innovative service is effective logistics solution for the
-                                delivery of small
-                                cargo. This service is useful for companies various.</p>
+                            <p>Choose us for seamless logistics solutions: Reliable service, timely deliveries, cost-effective shipping, advanced technology, global network, and dedicated customer support. Your logistics partner of choice.</p>
                         </div>
                     </div>
                 </div>
@@ -577,8 +566,7 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="#">Air Freight</a></h3>
                                 </div>
                                 <div class="choose-content">
-                                    <p>Express delivery inno service effective logistics solutio for delivery of small
-                                        cargo delivery service.</p>
+                                    <p>Swift, efficient, and global: Air freight delivers your cargo with speed and reliability, anytime, anywhere.</p>
                                     <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
@@ -592,8 +580,7 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="#">Ocean Freight</a></h3>
                                 </div>
                                 <div class="choose-content">
-                                    <p>Express delivery inno service effective logistics solutio for delivery of small
-                                        cargo delivery service.</p>
+                                    <p>Efficient, cost-effective, and reliable ocean freight solutions for your global shipping needs. Seamlessly crossing seas.</p>
                                     <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
@@ -607,8 +594,7 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="#">Consolidation</a></h3>
                                 </div>
                                 <div class="choose-content">
-                                    <p>Express delivery inno service effective logistics solutio for delivery of small
-                                        cargo delivery service.</p>
+                                    <p>Streamline operations, optimize resources, and enhance efficiency for a more synchronized business approach.</p>
                                     <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
@@ -622,8 +608,7 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="#">Deconsolidation</a></h3>
                                 </div>
                                 <div class="choose-content">
-                                    <p>Express delivery inno service effective logistics solutio for delivery of small
-                                        cargo delivery service.</p>
+                                    <p>Breaking down shipments for efficient distribution, optimizing supply chains, and reducing transit times.</p>
                                     <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
@@ -637,8 +622,7 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="Drayage.php">Drayage</a></h3>
                                 </div>
                                 <div class="choose-content">
-                                    <p>Express delivery inno service effective logistics solutio for delivery of small
-                                        cargo delivery service.</p>
+                                    <p>Efficient short-distance transport, connecting ports and terminals to streamline your supply chain.</p>
                                     <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
@@ -652,8 +636,7 @@ if (isset($_POST["submit"])) {
                                     <h3><a href="#">End to End Logistics</a></h3>
                                 </div>
                                 <div class="choose-content">
-                                    <p>Express delivery inno service effective logistics solutio for delivery of small
-                                        cargo delivery service.</p>
+                                    <p>Seamless solutions from pickup to delivery – your trusted partner for end-to-end logistics excellence.</p>
                                     <!-- <a href="#"><i class="fas fa-arrow-alt-circle-right"></i> Read More</a> -->
                                 </div>
                             </div>
@@ -677,9 +660,7 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-7 col-lg-10">
                         <div class="s-section-title text-center mb-60">
                             <h2>how we help you</h2>
-                            <p>Express delivery is an innovative service is effective logistics solution for the
-                                delivery of small cargo. This service
-                                is useful for companies various.</p>
+                            <p>We streamline your supply chain with expert logistics solutions, ensuring seamless transportation, warehousing, and distribution for your business success.</p>
                         </div>
                     </div>
                 </div>
@@ -746,9 +727,7 @@ if (isset($_POST["submit"])) {
                                 <h6>Express delivery is an innovative service</h6>
                             </div>
                             <div class="int-services-content">
-                                <p>Express delivery is an innovative service is effective logistics solution for the
-                                    delivery of small cargo. This service
-                                    is useful for companies of various effective logistics scale.</p>
+                                <p>Trust us with your international cargo needs. Our seasoned experts manage every aspect, from customs clearance to timely delivery, ensuring your goods reach their global destinations efficiently and securely.</p>
                                 <a href="support.php" class="btn red-btn">Get
                                     Fare Rate</a>
                             </div>
