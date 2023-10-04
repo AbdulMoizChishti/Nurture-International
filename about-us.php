@@ -21,10 +21,9 @@ if (isset($_POST["submit"])) {
     $query1 = mysqli_query($connection, $ins);
 
     if ($query1) {
-        $emailAddress = 'moaiz599@gmail.com';
-        $subject = 'Test email';
-        $body = "From country: $fc \n\n From address: $tc";
-
+        $emailAddress = 'Info@nilcl.com';
+        $subject = 'Inquiry form on NILCL';
+        $body = "From country: $fc \n\n From address: $fa \n\n to address: $tc \n\n to address: $ta \n\n Size: $size \n\n Quantity: $qty \n\n weight: $weight \n\n Freight Type: $ft \n\n category: $category \n\n From email: $email ";
         $mailtoLink = "mailto:$emailAddress?subject=" . urlencode($subject) . "&body=" . urlencode($body);
 
         echo '<script>window.location.href = "' . $mailtoLink . '";</script>';
@@ -548,64 +547,57 @@ if (isset($_POST["submit"])) {
         <!-- breadcrumb-area-end -->
 
         <!-- services-area -->
-        <section class="services-area delivery-bg pt-110 pb-90">
+        <section class="services-area delivery-bg pt-110 pb-70">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-xl-7 col-lg-10">
                         <div class="s-section-title text-center mb-60">
-                            <h2>Cargo Delivery</h2>
-                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                small cargo. This service is useful for companies various.</p>
+                            <h2>WHO WE ARE</h2>
+                            <p>We streamline your supply chain with expert logistics solutions, ensuring seamless transportation, warehousing, and distribution for your business success.</p>
                         </div>
                     </div>
                 </div>
                 <div class="services-wrapper">
                     <div class="row">
                         <div class="col-lg-4 col-md-6">
-                            <div class="single-services mb-30">
-                                <div class="services-thumb">
-                                    <a href="#"><img src="img/images/services_img01.jpg" alt="img"></a>
+                            <div class="s-single-services mb-50">
+                                <div class="services-thumb mb-25">
+                                    <a><img src="img/images/s_services_img01.jpg" alt="img"></a>
                                 </div>
-                                <div class="services-content">
-                                    <div class="services-icon">
-                                        <i class="flaticon-shipping-and-delivery"></i>
-                                    </div>
-                                    <h3><a href="#">More Control, for Free</a></h3>
-                                    <span>Delivery Service</span>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                        small cargo service.</p>
+                                <div class="s-services-content">
+                                    <!-- <h6></h6> -->
+                                    <h3><a>Consolidation</a></h3>
+                                    <!-- <p>Express delivery is an innovativ service is effective logistics solutio for
+                                        delivery of small cargo service.</p> -->
+                                    <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="single-services mb-30">
-                                <div class="services-thumb">
-                                    <a href="#"><img src="img/images/services_img02.jpg" alt="img"></a>
+                            <div class="s-single-services mb-50">
+                                <div class="services-thumb mb-25">
+                                    <a href="support.php"><img src="img/images/s_services_img02.jpg" alt="img"></a>
                                 </div>
-                                <div class="services-content">
-                                    <div class="services-icon">
-                                        <i class="flaticon-shipping"></i>
-                                    </div>
-                                    <h3><a href="#">Expand with E-Commerce</a></h3>
-                                    <span>Delivery Service</span>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                        small cargo service.</p>
+                                <div class="s-services-content">
+                                    <!-- <h6>Inspiration Service</h6> -->
+                                    <h3><a>Deconsolidation</a></h3>
+                                    <!-- <p>Express delivery is an innovativ service is effective logistics solutio for -->
+                                    <!-- delivery of small cargo service.</p> -->
+                                    <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="single-services mb-30">
-                                <div class="services-thumb">
-                                    <a href="#"><img src="img/images/services_img03.jpg" alt="img"></a>
+                            <div class="s-single-services mb-50">
+                                <div class="services-thumb mb-25">
+                                    <a href="support.php"><img src="img/images/s_services_img03.jpg" alt="img"></a>
                                 </div>
-                                <div class="services-content">
-                                    <div class="services-icon">
-                                        <i class="flaticon-location"></i>
-                                    </div>
-                                    <h3><a href="#">More Than Anywhere Shipping</a></h3>
-                                    <span>Delivery Service</span>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for delivery of
-                                        small cargo service.</p>
+                                <div class="s-services-content">
+                                    <!-- <h6>Discover Locations</h6> -->
+                                    <h3><a>Door-Door Delivery</a></h3>
+                                    <!-- <p>Express delivery is an innovativ service is effective logistics solutio for
+                                        delivery of small cargo service.</p> -->
+                                    <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
                         </div>
@@ -628,10 +620,9 @@ if (isset($_POST["submit"])) {
                                 <h6>Express delivery is an innovative service</h6>
                             </div>
                             <div class="int-services-content">
-                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                    small cargo. This service
-                                    is useful for companies of various effective logistics scale.</p>
-                                <a href="#" class="btn red-btn">comparison</a>
+                                <p>Trust us with your international cargo needs. Our seasoned experts manage every aspect, from customs clearance to timely delivery, ensuring your goods reach their global destinations efficiently and securely.</p>
+                                <a href="support.php" class="btn red-btn">Get
+                                    Fare Rate</a>
                             </div>
                         </div>
                     </div>
@@ -735,13 +726,13 @@ if (isset($_POST["submit"])) {
                                                     <div class="card-header" id="headingOne">
                                                         <h5 class="mb-0">
                                                             <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                What is Startesk?
+                                                                What is Nurture INTL LCL?
                                                             </a>
                                                         </h5>
                                                     </div>
                                                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
+                                                            <p>Nurture International LCL is a logistics company that specializes in providing Less than Container Load (LCL) shipping services. LCL shipping is a method of transporting goods in which multiple smaller shipments from different customers are consolidated into a single shipping container. This allows customers to share the cost of shipping a container, making it a cost-effective option for businesses that don't have enough goods to fill an entire container.</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -755,7 +746,7 @@ if (isset($_POST["submit"])) {
                                                     </div>
                                                     <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
+                                                            <p>Cargo and logistics are two closely related concepts that pertain to the movement and transportation of goods from one location to another, typically within a supply chain or distribution network. </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -769,11 +760,11 @@ if (isset($_POST["submit"])) {
                                                     </div>
                                                     <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
+                                                            <p>the main difference between freight and cargo is that "freight" can refer to both the goods being transported and the cost associated with their transportation, whereas "cargo" specifically refers to the goods or items being carried by a transportation vehicle. However, these terms are often used interchangeably in casual conversation, and their precise usage can vary depending on the context and industry.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
+                                                <!-- <div class="card">
                                                     <div class="card-header" id="headingFour">
                                                         <h5 class="mb-0">
                                                             <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
@@ -786,7 +777,7 @@ if (isset($_POST["submit"])) {
                                                             <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="card">
                                                     <div class="card-header" id="headingFive">
                                                         <h5 class="mb-0">
@@ -797,11 +788,11 @@ if (isset($_POST["submit"])) {
                                                     </div>
                                                     <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
+                                                            <p>These are some of the main types of cargo, and the specific categorization may vary depending on the industry and context of transportation and logistics. The type of cargo determines the equipment, packaging, handling procedures, and transportation methods used for its safe and efficient movement.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
+                                                <!-- <div class="card">
                                                     <div class="card-header" id="headingSix">
                                                         <h5 class="mb-0">
                                                             <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
@@ -814,7 +805,7 @@ if (isset($_POST["submit"])) {
                                                             <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -829,103 +820,91 @@ if (isset($_POST["submit"])) {
                                                 <h5>Cargo Logistics Provides</h5>
                                                 <p>Express delivery is an innovative service effective logistics.</p>
                                             </div>
-                                            <div class="accordion" id="accordionAwardExample">
+                                            <div class="accordion" id="accordionExample">
                                                 <div class="card">
-                                                    <div class="card-header" id="headingAwardOne">
+                                                    <div class="card-header" id="headingOne">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseAwardOne" aria-expanded="true" aria-controls="collapseAwardOne">
-                                                                What is Startesk?
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                What is Nurture INTL LCL?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseAwardOne" class="collapse" aria-labelledby="headingAwardOne" data-parent="#accordionAwardExample">
+                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Nurture International LCL is a logistics company that specializes in providing Less than Container Load (LCL) shipping services. LCL shipping is a method of transporting goods in which multiple smaller shipments from different customers are consolidated into a single shipping container. This allows customers to share the cost of shipping a container, making it a cost-effective option for businesses that don't have enough goods to fill an entire container.</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-header" id="headingAwardTwo">
+                                                    <div class="card-header" id="headingTwo">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseAwardTwo" aria-expanded="false" aria-controls="collapseAwardTwo">
+                                                            <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                                 What is cargo and logistics?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseAwardTwo" class="collapse show" aria-labelledby="headingAwardTwo" data-parent="#accordionAwardExample">
+                                                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Cargo and logistics are two closely related concepts that pertain to the movement and transportation of goods from one location to another, typically within a supply chain or distribution network. </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-header" id="headingAwardThree">
+                                                    <div class="card-header" id="headingThree">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseAwardThree" aria-expanded="false" aria-controls="collapseAwardThree">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                                 What is the difference between freight and cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseAwardThree" class="collapse" aria-labelledby="headingAwardThree" data-parent="#accordionAwardExample">
+                                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>the main difference between freight and cargo is that "freight" can refer to both the goods being transported and the cost associated with their transportation, whereas "cargo" specifically refers to the goods or items being carried by a transportation vehicle. However, these terms are often used interchangeably in casual conversation, and their precise usage can vary depending on the context and industry.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingAwardFour">
+                                                <!-- <div class="card">
+                                                    <div class="card-header" id="headingFour">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseAwardFour" aria-expanded="false" aria-controls="collapseAwardFour">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                                                 What is between shipment cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseAwardFour" class="collapse" aria-labelledby="headingAwardFour" data-parent="#accordionAwardExample">
+                                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="card">
-                                                    <div class="card-header" id="headingAwardFive">
+                                                    <div class="card-header" id="headingFive">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseAwardFive" aria-expanded="false" aria-controls="collapseAwardFive">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                                                 What are types of cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseAwardFive" class="collapse" aria-labelledby="headingAwardFive" data-parent="#accordionAwardExample">
+                                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>These are some of the main types of cargo, and the specific categorization may vary depending on the industry and context of transportation and logistics. The type of cargo determines the equipment, packaging, handling procedures, and transportation methods used for its safe and efficient movement.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingAwardSix">
+                                                <!-- <div class="card">
+                                                    <div class="card-header" id="headingSix">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseAwardSix" aria-expanded="false" aria-controls="collapseAwardSix">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                                                 What is the difference between freight cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseAwardSix" class="collapse" aria-labelledby="headingAwardSix" data-parent="#accordionAwardExample">
+                                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -940,103 +919,91 @@ if (isset($_POST["submit"])) {
                                                 <h5>Words Cargo Freight</h5>
                                                 <p>Express delivery is an innovative service effective logistics.</p>
                                             </div>
-                                            <div class="accordion" id="accordionBullseyeExample">
+                                            <div class="accordion" id="accordionExample">
                                                 <div class="card">
-                                                    <div class="card-header" id="headingBullseyeOne">
+                                                    <div class="card-header" id="headingOne">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseBullseyeOne" aria-expanded="true" aria-controls="collapseBullseyeOne">
-                                                                What is Startesk?
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                What is Nurture INTL LCL?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseBullseyeOne" class="collapse" aria-labelledby="headingBullseyeOne" data-parent="#accordionBullseyeExample">
+                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Nurture International LCL is a logistics company that specializes in providing Less than Container Load (LCL) shipping services. LCL shipping is a method of transporting goods in which multiple smaller shipments from different customers are consolidated into a single shipping container. This allows customers to share the cost of shipping a container, making it a cost-effective option for businesses that don't have enough goods to fill an entire container.</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-header" id="headingBullseyeTwo">
+                                                    <div class="card-header" id="headingTwo">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseBullseyeTwo" aria-expanded="false" aria-controls="collapseBullseyeTwo">
+                                                            <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                                 What is cargo and logistics?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseBullseyeTwo" class="collapse show" aria-labelledby="headingBullseyeTwo" data-parent="#accordionBullseyeExample">
+                                                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Cargo and logistics are two closely related concepts that pertain to the movement and transportation of goods from one location to another, typically within a supply chain or distribution network. </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-header" id="headingBullseyeThree">
+                                                    <div class="card-header" id="headingThree">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseBullseyeThree" aria-expanded="false" aria-controls="collapseBullseyeThree">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                                 What is the difference between freight and cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseBullseyeThree" class="collapse" aria-labelledby="headingBullseyeThree" data-parent="#accordionBullseyeExample">
+                                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>the main difference between freight and cargo is that "freight" can refer to both the goods being transported and the cost associated with their transportation, whereas "cargo" specifically refers to the goods or items being carried by a transportation vehicle. However, these terms are often used interchangeably in casual conversation, and their precise usage can vary depending on the context and industry.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingBullseyeFour">
+                                                <!-- <div class="card">
+                                                    <div class="card-header" id="headingFour">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseBullseyeFour" aria-expanded="false" aria-controls="collapseBullseyeFour">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                                                 What is between shipment cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseBullseyeFour" class="collapse" aria-labelledby="headingBullseyeFour" data-parent="#accordionBullseyeExample">
+                                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="card">
-                                                    <div class="card-header" id="headingBullseyeFive">
+                                                    <div class="card-header" id="headingFive">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseBullseyeFive" aria-expanded="false" aria-controls="collapseBullseyeFive">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                                                 What are types of cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseBullseyeFive" class="collapse" aria-labelledby="headingBullseyeFive" data-parent="#accordionBullseyeExample">
+                                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>These are some of the main types of cargo, and the specific categorization may vary depending on the industry and context of transportation and logistics. The type of cargo determines the equipment, packaging, handling procedures, and transportation methods used for its safe and efficient movement.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingBullseyeSix">
+                                                <!-- <div class="card">
+                                                    <div class="card-header" id="headingSix">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseBullseyeSix" aria-expanded="false" aria-controls="collapseBullseyeSix">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                                                 What is the difference between freight cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseBullseyeSix" class="collapse" aria-labelledby="headingBullseyeSix" data-parent="#accordionBullseyeExample">
+                                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -1051,103 +1018,91 @@ if (isset($_POST["submit"])) {
                                                 <h5>Shipping Lines</h5>
                                                 <p>Express delivery is an innovative service effective logistics.</p>
                                             </div>
-                                            <div class="accordion" id="accordionCogExample">
+                                            <div class="accordion" id="accordionExample">
                                                 <div class="card">
-                                                    <div class="card-header" id="headingCogOne">
+                                                    <div class="card-header" id="headingOne">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseCogOne" aria-expanded="true" aria-controls="collapseCogOne">
-                                                                What is Startesk?
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                What is Nurture INTL LCL?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseCogOne" class="collapse" aria-labelledby="headingCogOne" data-parent="#accordionCogExample">
+                                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Nurture International LCL is a logistics company that specializes in providing Less than Container Load (LCL) shipping services. LCL shipping is a method of transporting goods in which multiple smaller shipments from different customers are consolidated into a single shipping container. This allows customers to share the cost of shipping a container, making it a cost-effective option for businesses that don't have enough goods to fill an entire container.</p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-header" id="headingCogTwo">
+                                                    <div class="card-header" id="headingTwo">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseCogTwo" aria-expanded="false" aria-controls="collapseCogTwo">
+                                                            <a href="#" class="btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                                                 What is cargo and logistics?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseCogTwo" class="collapse show" aria-labelledby="headingCogTwo" data-parent="#accordionCogExample">
+                                                    <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Cargo and logistics are two closely related concepts that pertain to the movement and transportation of goods from one location to another, typically within a supply chain or distribution network. </p>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="card">
-                                                    <div class="card-header" id="headingCogThree">
+                                                    <div class="card-header" id="headingThree">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseCogThree" aria-expanded="false" aria-controls="collapseCogThree">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                                                 What is the difference between freight and cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseCogThree" class="collapse" aria-labelledby="headingCogThree" data-parent="#accordionCogExample">
+                                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>the main difference between freight and cargo is that "freight" can refer to both the goods being transported and the cost associated with their transportation, whereas "cargo" specifically refers to the goods or items being carried by a transportation vehicle. However, these terms are often used interchangeably in casual conversation, and their precise usage can vary depending on the context and industry.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingCogFour">
+                                                <!-- <div class="card">
+                                                    <div class="card-header" id="headingFour">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseCogFour" aria-expanded="false" aria-controls="collapseCogFour">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                                                 What is between shipment cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseCogFour" class="collapse" aria-labelledby="headingCogFour" data-parent="#accordionCogExample">
+                                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                                 <div class="card">
-                                                    <div class="card-header" id="headingCogFive">
+                                                    <div class="card-header" id="headingFive">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseCogFive" aria-expanded="false" aria-controls="collapseCogFive">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                                                 What are types of cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseCogFive" class="collapse" aria-labelledby="headingCogFive" data-parent="#accordionCogExample">
+                                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>These are some of the main types of cargo, and the specific categorization may vary depending on the industry and context of transportation and logistics. The type of cargo determines the equipment, packaging, handling procedures, and transportation methods used for its safe and efficient movement.</p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="card">
-                                                    <div class="card-header" id="headingCogSix">
+                                                <!-- <div class="card">
+                                                    <div class="card-header" id="headingSix">
                                                         <h5 class="mb-0">
-                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseCogSix" aria-expanded="false" aria-controls="collapseCogSix">
+                                                            <a href="#" class="btn-link collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                                                 What is the difference between freight cargo?
                                                             </a>
                                                         </h5>
                                                     </div>
-                                                    <div id="collapseCogSix" class="collapse" aria-labelledby="headingCogSix" data-parent="#accordionCogExample">
+                                                    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
                                                         <div class="card-body">
-                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of
-                                                                small cargo. This service is useful companies of various effective service is effective
-                                                                logistics scale.</p>
+                                                            <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service is useful companies of various effective service is effective logistics scale.</p>
                                                         </div>
                                                     </div>
-                                                </div>
+                                                </div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -1242,7 +1197,7 @@ if (isset($_POST["submit"])) {
                                 <a href="index.php"><img src="img/logo/wlogo.png" alt="img"></a>
                             </div>
                             <div class="footer-text">
-                                <p>Orem Ipsum is simply dumm text the printing and types indstr sum has been the industry
+                                <p>Your trusted partner in global logistics, offering cost-effective LCL solutions with a commitment to sustainability and excellence.
                                 </p>
                             </div>
                             <div class="footer-social">
@@ -1258,44 +1213,15 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
-                                <h5>RECENT POSTS</h5>
-                            </div>
-                            <div class="f-rc-post">
-                                <ul>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img01.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img02.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="footer-widget mb-50">
-                            <div class="fw-title mb-30">
                                 <h5>USEFUL LINKS</h5>
                             </div>
                             <div class="fw-link">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> About us</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Delivery Information</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Terms & Conditions</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Refund Policy</a></li>
+                                    <li><a href="about-us.php"><i class="fas fa-caret-right"></i> About us</a></li>
+                                    <li><a href="Air Freight.php"><i class="fas fa-caret-right"></i> Air Freight</a></li>
+                                    <li><a href="Ocean Freight.php"><i class="fas fa-caret-right"></i> Ocean Freight</a></li>
+                                    <li><a href="Drayage.php"><i class="fas fa-caret-right"></i> Drayage</a></li>
+                                    <li><a href="support.php"><i class="fas fa-caret-right"></i> Support</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1303,13 +1229,38 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
-                                <h5>Support & Downloads</h5>
+                                <h5>Contact Us</h5>
+                            </div>
+                            <div class="f-rc-post">
+                                <ul>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Call us</span>
+                                            <h5><a>+1-469-200-6603</a></h5>
+                                        </div>
+                                    </li>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Email us</span>
+                                            <h5><a>info@nilcl.com</a></h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="footer-widget mb-50">
+                            <div class="fw-title mb-30">
+                                <h5>Address</h5>
                             </div>
                             <div class="f-support-content">
-                                <p>Lorem ipsum dolor sit amet, consy eetur adipisc de elit. Quisque act raqum nunc no dolor
+                                <p>100 S Juniper Street, 3rd Floor, Philadelphia, PA 19087
                                 </p>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a>
+                                <!-- <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
+                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a> -->
                             </div>
                         </div>
                     </div>
@@ -1321,7 +1272,7 @@ if (isset($_POST["submit"])) {
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-7">
                         <div class="copyright-text">
-                            <p>Copyright© <span>Nurture Int'l LCL </span> | All Rights Reserved</p>
+                            <p>Copyright© <span> <a href="login.php"> Nurture Int'l LCL </a> </span> | All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">

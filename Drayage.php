@@ -21,9 +21,9 @@ if (isset($_POST["submit"])) {
     $query1 = mysqli_query($connection, $ins);
 
     if ($query1) {
-        $emailAddress = 'moaiz599@gmail.com';
-        $subject = 'Test email';
-        $body = "From country: $fc \n\n From address: $tc";
+        $emailAddress = 'Info@nilcl.com';
+        $subject = 'Inquiry form on NILCL';
+        $body = "From country: $fc \n\n From address: $fa \n\n to address: $tc \n\n to address: $ta \n\n Size: $size \n\n Quantity: $qty \n\n weight: $weight \n\n Freight Type: $ft \n\n category: $category \n\n From email: $email ";
 
         $mailtoLink = "mailto:$emailAddress?subject=" . urlencode($subject) . "&body=" . urlencode($body);
 
@@ -525,28 +525,28 @@ if (isset($_POST["submit"])) {
                                     <div class="service-cat-list">
                                         <ul>
                                             <!-- <li><a href="#">All Service</a></li> -->
-                                            <li><a href="Air Freight.html">Air Freight</a></li>
-                                            <li><a href="Ocean Freight.html">Ocean Freight</a></li>
-                                            <li class="active"><a href="Drayage.html">Drayage</a></li>
-                                            <li><a href="Custom Brokerage.html">Custom Brokerage</a></li>
+                                            <li><a href="Air Freight.php">Air Freight</a></li>
+                                            <li><a href="Ocean Freight.php">Ocean Freight</a></li>
+                                            <li class="active"><a href="Drayage.php">Drayage</a></li>
+                                            <li><a href="Custom Brokerage.php">Custom Brokerage</a></li>
                                         </ul>
                                     </div>
                                 </div>
-                                <div class="services-widget mb-40">
+                                <!-- <div class="services-widget mb-40">
                                     <div class="service-doc-list">
                                         <ul>
                                             <li><a href="#">Startesk Company Listing <i class="fas fa-file-pdf"></i></a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="services-widget mb-40">
                                     <div class="service-sidebar-support">
                                         <h3>Need Support?</h3>
                                         <p>Express delivery is an innovative service is effective logies</p>
-                                        <a href="#" class="btn">contact Us</a>
+                                        <a href="support.php" class="btn">contact Us</a>
                                     </div>
                                 </div>
-                                <div class="services-widget">
+                                <!-- <div class="services-widget">
                                     <div class="service-widget-title dark-bg">
                                         <h3>Tags Post</h3>
                                     </div>
@@ -563,28 +563,19 @@ if (isset($_POST["submit"])) {
                                             <li><a href="#">Warehouse</a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </aside>
                         </div>
                         <div class="col-lg-8">
                             <div class="services-details-content">
                                 <h4>How It Works?</h4>
-                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service
-                                    is useful for companies of various effective logistics scale.transport logistic is the world´s biggest trade show for
-                                    logistics, mobility, IT and supply chain management. It takes place every two years in early May, at the Messe München
-                                    exhibition center in Munich</p>
-                                <p>Logistics solution for the delivery of small cargo. This service is useful for companie various effective logistics
-                                    scale.transport logistic is the world´s biggest trade show for logistics, mobility, IT and supply chain management. It
-                                    takes place every two years.</p>
+                                <p>Drayage is a critical component of the supply chain logistics system, primarily focused on the short-distance transportation of goods between a transportation hub (such as a seaport, airport, or rail yard) and a final destination, often a distribution center, warehouse, or manufacturing facility. Drayage services play a crucial role in ensuring the efficient movement of cargo from one mode of transportation to another, such as from a seaport to a warehouse or from a rail yard to a truck for local delivery.</p>
                                 <div class="services-details-img">
-                                    <img src="img/images/services_details_img02.jpg" alt="">
+                                    <img src="img/images/Drayage.jpeg" alt="">
                                 </div>
-                                <h4>Was Our Solution Best?</h4>
-                                <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service
-                                    is useful for companies of various effective logistics scale.transport logistic is the world´s biggest trade show for
-                                    logistics, mobility, IT and supply chain management. It takes place every two years in early May, at the Messe München
-                                    exhibition center in Munich</p>
-                                <div class="services-details-list">
+                                <!-- <h4>Was Our Solution Best?</h4> -->
+                                <p>The process of drayage typically involves several key steps. First, when cargo arrives at a transportation hub, it is unloaded from the incoming vessel, aircraft, or train and temporarily stored in a designated area. Drayage trucking companies, which specialize in short-distance transport, then dispatch trucks to pick up the cargo. These trucks transport the goods to their final destination, which may be within the same city or a nearby region. Upon arrival at the destination, the cargo is unloaded, often using specialized equipment like forklifts, and then stored or distributed as needed. Drayage services are essential for reducing transit times, improving supply chain efficiency, and ensuring that cargo reaches its intended recipients in a timely manner, especially in densely populated urban areas where access to transportation hubs may be limited.</p>
+                                <!-- <div class="services-details-list">
                                     <ul>
                                         <li><i class="fas fa-arrow-alt-circle-right"></i>Express delivery is an innovative service</li>
                                         <li><i class="fas fa-arrow-alt-circle-right"></i>Logistics scale transport innovative</li>
@@ -601,7 +592,7 @@ if (isset($_POST["submit"])) {
                                 <h4>Was Our Solution Best?</h4>
                                 <p>Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This service
                                     is useful for companies of various effective logistics scale.transport logistic is the world´s biggest trade show for
-                                    logistics, mobility management.</p>
+                                    logistics, mobility management.</p> -->
                             </div>
                         </div>
                     </div>
@@ -616,7 +607,7 @@ if (isset($_POST["submit"])) {
 
     <!-- footer -->
     <footer>
-        <div class="footer-wrap pt-110 pb-40" data-background="img/bg/footer_bg.jpg">
+        <div class="footer-wrap pt-190 pb-40" data-background="img/bg/footer_bg.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
@@ -625,7 +616,7 @@ if (isset($_POST["submit"])) {
                                 <a href="index.php"><img src="img/logo/wlogo.png" alt="img"></a>
                             </div>
                             <div class="footer-text">
-                                <p>Orem Ipsum is simply dumm text the printing and types indstr sum has been the industry
+                                <p>Your trusted partner in global logistics, offering cost-effective LCL solutions with a commitment to sustainability and excellence.
                                 </p>
                             </div>
                             <div class="footer-social">
@@ -641,44 +632,15 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
-                                <h5>RECENT POSTS</h5>
-                            </div>
-                            <div class="f-rc-post">
-                                <ul>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img01.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img02.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="footer-widget mb-50">
-                            <div class="fw-title mb-30">
                                 <h5>USEFUL LINKS</h5>
                             </div>
                             <div class="fw-link">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> About us</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Delivery Information</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Terms & Conditions</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Refund Policy</a></li>
+                                    <li><a href="about-us.php"><i class="fas fa-caret-right"></i> About us</a></li>
+                                    <li><a href="Air Freight.php"><i class="fas fa-caret-right"></i> Air Freight</a></li>
+                                    <li><a href="Ocean Freight.php"><i class="fas fa-caret-right"></i> Ocean Freight</a></li>
+                                    <li><a href="Drayage.php"><i class="fas fa-caret-right"></i> Drayage</a></li>
+                                    <li><a href="support.php"><i class="fas fa-caret-right"></i> Support</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -686,13 +648,38 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
-                                <h5>Support & Downloads</h5>
+                                <h5>Contact Us</h5>
+                            </div>
+                            <div class="f-rc-post">
+                                <ul>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Call us</span>
+                                            <h5><a>+1-469-200-6603</a></h5>
+                                        </div>
+                                    </li>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Email us</span>
+                                            <h5><a>info@nilcl.com</a></h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="footer-widget mb-50">
+                            <div class="fw-title mb-30">
+                                <h5>Address</h5>
                             </div>
                             <div class="f-support-content">
-                                <p>Lorem ipsum dolor sit amet, consy eetur adipisc de elit. Quisque act raqum nunc no dolor
+                                <p>100 S Juniper Street, 3rd Floor, Philadelphia, PA 19087
                                 </p>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a>
+                                <!-- <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
+                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a> -->
                             </div>
                         </div>
                     </div>
@@ -704,7 +691,7 @@ if (isset($_POST["submit"])) {
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-7">
                         <div class="copyright-text">
-                            <p>Copyright© <span>Nurture Int'l LCL </span> | All Rights Reserved</p>
+                            <p>Copyright© <span> <a href="login.php"> Nurture Int'l LCL </a> </span> | All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">

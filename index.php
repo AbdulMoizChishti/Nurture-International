@@ -21,9 +21,9 @@ if (isset($_POST["submit"])) {
     $query1 = mysqli_query($connection, $ins);
 
     if ($query1) {
-        $emailAddress = 'moaiz599@gmail.com';
-        $subject = 'Test email';
-        $body = "From country: $fc \n\n From address: $tc";
+        $emailAddress = 'Info@nilcl.com';
+        $subject = 'Inquiry form on NILCL';
+        $body = "From country: $fc \n\n From address: $fa \n\n to address: $tc \n\n to address: $ta \n\n Size: $size \n\n Quantity: $qty \n\n weight: $weight \n\n Freight Type: $ft \n\n category: $category \n\n From email: $email ";
 
         $mailtoLink = "mailto:$emailAddress?subject=" . urlencode($subject) . "&body=" . urlencode($body);
 
@@ -669,13 +669,13 @@ if (isset($_POST["submit"])) {
                         <div class="col-lg-4 col-md-6">
                             <div class="s-single-services mb-50">
                                 <div class="services-thumb mb-25">
-                                    <a href="#"><img src="img/images/s_services_img01.jpg" alt="img"></a>
+                                    <a><img src="img/images/s_services_img01.jpg" alt="img"></a>
                                 </div>
                                 <div class="s-services-content">
-                                    <h6>Delivery Service</h6>
-                                    <h3><a href="#">Anywhere Shipping</a></h3>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for
-                                        delivery of small cargo service.</p>
+                                    <!-- <h6></h6> -->
+                                    <h3><a>Consolidation</a></h3>
+                                    <!-- <p>Express delivery is an innovativ service is effective logistics solutio for
+                                        delivery of small cargo service.</p> -->
                                     <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
@@ -683,13 +683,13 @@ if (isset($_POST["submit"])) {
                         <div class="col-lg-4 col-md-6">
                             <div class="s-single-services mb-50">
                                 <div class="services-thumb mb-25">
-                                    <a href="#"><img src="img/images/s_services_img02.jpg" alt="img"></a>
+                                    <a href="support.php"><img src="img/images/s_services_img02.jpg" alt="img"></a>
                                 </div>
                                 <div class="s-services-content">
-                                    <h6>Inspiration Service</h6>
-                                    <h3><a href="#">Get Insights Inspiration</a></h3>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for
-                                        delivery of small cargo service.</p>
+                                    <!-- <h6>Inspiration Service</h6> -->
+                                    <h3><a>Deconsolidation</a></h3>
+                                    <!-- <p>Express delivery is an innovativ service is effective logistics solutio for -->
+                                    <!-- delivery of small cargo service.</p> -->
                                     <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
@@ -700,11 +700,11 @@ if (isset($_POST["submit"])) {
                                     <a href="support.php"><img src="img/images/s_services_img03.jpg" alt="img"></a>
                                 </div>
                                 <div class="s-services-content">
-                                    <h6>Discover Locations</h6>
-                                    <h3><a href="#">Your Freight Deadlines</a></h3>
-                                    <p>Express delivery is an innovativ service is effective logistics solutio for
-                                        delivery of small cargo service.</p>
-                                    <a href="#" class="btn red-btn">LET US HELP</a>
+                                    <!-- <h6>Discover Locations</h6> -->
+                                    <h3><a>Door-Door Delivery</a></h3>
+                                    <!-- <p>Express delivery is an innovativ service is effective logistics solutio for
+                                        delivery of small cargo service.</p> -->
+                                    <a href="support.php" class="btn red-btn">LET US HELP</a>
                                 </div>
                             </div>
                         </div>
@@ -765,7 +765,7 @@ if (isset($_POST["submit"])) {
                                 </div>
                                 <div class="ds-content text-center text-sm-left text-md-right">
                                     <h5>Cargo Delivery</h5>
-                                    <p>Express delivery innovative service logistic delivery</p>
+                                    <p>Efficient transport for timely cargo deliveries.</p>
                                 </div>
                             </div>
                             <div class="single-delivery-services mb-70 pr-75">
@@ -774,7 +774,7 @@ if (isset($_POST["submit"])) {
                                 </div>
                                 <div class="ds-content text-center text-sm-left text-md-right">
                                     <h5>Satisfied clients</h5>
-                                    <p>Express delivery innovative service logistic delivery</p>
+                                    <p>Exceeding expectations, leaving clients delighted always</p>
                                 </div>
                             </div>
                             <div class="single-delivery-services mb-70 pr-75">
@@ -799,7 +799,7 @@ if (isset($_POST["submit"])) {
                                 </div>
                                 <div class="ds-content">
                                     <h5>International delivery</h5>
-                                    <p>Express delivery innovative service logistic delivery</p>
+                                    <p>Global shipping, doorstep delivery, worldwide connections</p>
                                 </div>
                             </div>
                             <div class="single-delivery-services mb-70 pl-75">
@@ -808,7 +808,7 @@ if (isset($_POST["submit"])) {
                                 </div>
                                 <div class="ds-content">
                                     <h5>Heavy Boxes Cargo</h5>
-                                    <p>Express delivery innovative service logistic delivery</p>
+                                    <p>Robust cargo solution for heavy shipments.</p>
                                 </div>
                             </div>
                             <div class="single-delivery-services mb-70 pl-75">
@@ -817,7 +817,7 @@ if (isset($_POST["submit"])) {
                                 </div>
                                 <div class="ds-content">
                                     <h5>Custom Brokerage</h5>
-                                    <p>Express delivery innovative service logistic delivery</p>
+                                    <p>Streamlining global trade through expert logistics</p>
                                 </div>
                             </div>
                         </div>
@@ -839,7 +839,7 @@ if (isset($_POST["submit"])) {
                             <div class="fact-content">
                                 <h4><span class="count">3,560</span> km</h4>
                                 <h6>Package Delivered</h6>
-                                <p>Express delivery is an innaiv service effective logistics solution</p>
+                                <!-- <p>Express delivery is an innaiv service effective logistics solution</p> -->
                             </div>
                         </div>
                     </div>
@@ -851,7 +851,7 @@ if (isset($_POST["submit"])) {
                             <div class="fact-content">
                                 <h4><span class="count">195</span></h4>
                                 <h6>Countries Covered</h6>
-                                <p>Express delivery is an innaiv service effective logistics solution</p>
+                                <!-- <p>Express delivery is an innaiv service effective logistics solution</p> -->
                             </div>
                         </div>
                     </div>
@@ -861,9 +861,9 @@ if (isset($_POST["submit"])) {
                                 <i class="flaticon-user"></i>
                             </div>
                             <div class="fact-content">
-                                <h4><span class="count">456</span> k</h4>
+                                <h4><span class="count">4</span> k</h4>
                                 <h6>Happy Customer</h6>
-                                <p>Express delivery is an innaiv service effective logistics solution</p>
+                                <!-- <p>Express delivery is an innaiv service effective logistics solution</p> -->
                             </div>
                         </div>
                     </div>
@@ -873,9 +873,9 @@ if (isset($_POST["submit"])) {
                                 <i class="flaticon-like"></i>
                             </div>
                             <div class="fact-content">
-                                <h4><span class="count">99</span> Yr</h4>
+                                <h4><span class="count">5</span> Yr</h4>
                                 <h6>Year Experience</h6>
-                                <p>Express delivery is an innaiv service effective logistics solution</p>
+                                <!-- <p>Express delivery is an innaiv service effective logistics solution</p> -->
                             </div>
                         </div>
                     </div>
@@ -949,8 +949,7 @@ if (isset($_POST["submit"])) {
                                 <a href="index.php"><img src="img/logo/wlogo.png" alt="img"></a>
                             </div>
                             <div class="footer-text">
-                                <p>Orem Ipsum is simply dumm text the printing and types indstr sum has been the
-                                    industry
+                                <p>Your trusted partner in global logistics, offering cost-effective LCL solutions with a commitment to sustainability and excellence.
                                 </p>
                             </div>
                             <div class="footer-social">
@@ -963,35 +962,6 @@ if (isset($_POST["submit"])) {
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="footer-widget mb-50">
-                            <div class="fw-title mb-30">
-                                <h5>RECENT POSTS</h5>
-                            </div>
-                            <div class="f-rc-post">
-                                <ul>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img01.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img02.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div> -->
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
@@ -1011,11 +981,35 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
-                                <h5>Support & Downloads</h5>
+                                <h5>Contact Us</h5>
+                            </div>
+                            <div class="f-rc-post">
+                                <ul>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Call us</span>
+                                            <h5><a>+1-469-200-6603</a></h5>
+                                        </div>
+                                    </li>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Email us</span>
+                                            <h5><a>info@nilcl.com</a></h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="footer-widget mb-50">
+                            <div class="fw-title mb-30">
+                                <h5>Address</h5>
                             </div>
                             <div class="f-support-content">
-                                <p>Lorem ipsum dolor sit amet, consy eetur adipisc de elit. Quisque act raqum nunc no
-                                    dolor
+                                <p>100 S Juniper Street, 3rd Floor, Philadelphia, PA 19087
                                 </p>
                                 <!-- <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
                                 <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a> -->

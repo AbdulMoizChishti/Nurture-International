@@ -21,9 +21,9 @@ if (isset($_POST["submit"])) {
     $query1 = mysqli_query($connection, $ins);
 
     if ($query1) {
-        $emailAddress = 'moaiz599@gmail.com';
-        $subject = 'Test email';
-        $body = "From country: $fc \n\n From address: $tc";
+        $emailAddress = 'Info@nilcl.com';
+        $subject = 'Inquiry form on NILCL';
+        $body = "From country: $fc \n\n From address: $fa \n\n to address: $tc \n\n to address: $ta \n\n Size: $size \n\n Quantity: $qty \n\n weight: $weight \n\n Freight Type: $ft \n\n category: $category \n\n From email: $email ";
 
         $mailtoLink = "mailto:$emailAddress?subject=" . urlencode($subject) . "&body=" . urlencode($body);
 
@@ -585,7 +585,7 @@ if (isset($_POST["submit"])) {
 
 
                             <!-- services-area -->
-                            <section class="services-area delivery-bg inner-help-bg pt-110 pb-70">
+                            <!-- <section class="services-area delivery-bg inner-help-bg pt-110 pb-70">
                                 <div class="container">
                                     <div class="row justify-content-center">
                                         <div class="col-xl-7 col-lg-10">
@@ -644,7 +644,7 @@ if (isset($_POST["submit"])) {
                                         </div>
                                     </div>
                                 </div>
-                            </section>
+                            </section> -->
                             <!-- services-area-end -->
 
     </main>
@@ -652,16 +652,16 @@ if (isset($_POST["submit"])) {
 
     <!-- footer -->
     <footer>
-        <div class="footer-wrap pt-110 pb-40" data-background="img/bg/footer_bg.jpg">
+        <div class="footer-wrap pt-190 pb-40" data-background="img/bg/footer_bg.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="footer-logo mb-35">
-                                <a href="index.php"><img src="img/logo/w_logo.png" alt="img"></a>
+                                <a href="index.php"><img src="img/logo/wlogo.png" alt="img"></a>
                             </div>
                             <div class="footer-text">
-                                <p>Orem Ipsum is simply dumm text the printing and types indstr sum has been the industry
+                                <p>Your trusted partner in global logistics, offering cost-effective LCL solutions with a commitment to sustainability and excellence.
                                 </p>
                             </div>
                             <div class="footer-social">
@@ -674,35 +674,7 @@ if (isset($_POST["submit"])) {
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6">
-                        <div class="footer-widget mb-50">
-                            <div class="fw-title mb-30">
-                                <h5>RECENT POSTS</h5>
-                            </div>
-                            <div class="f-rc-post">
-                                <ul>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img01.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="f-rc-thumb">
-                                            <a href="#"><img src="img/blog/f_rc_img02.jpg" alt="img"></a>
-                                        </div>
-                                        <div class="f-rc-content">
-                                            <span>19 Jun, 2019</span>
-                                            <h5><a href="#">which the syste built and actually</a></h5>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
@@ -710,11 +682,11 @@ if (isset($_POST["submit"])) {
                             </div>
                             <div class="fw-link">
                                 <ul>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> About us</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Delivery Information</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Terms & Conditions</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
-                                    <li><a href="#"><i class="fas fa-caret-right"></i> Refund Policy</a></li>
+                                    <li><a href="about-us.php"><i class="fas fa-caret-right"></i> About us</a></li>
+                                    <li><a href="Air Freight.php"><i class="fas fa-caret-right"></i> Air Freight</a></li>
+                                    <li><a href="Ocean Freight.php"><i class="fas fa-caret-right"></i> Ocean Freight</a></li>
+                                    <li><a href="Drayage.php"><i class="fas fa-caret-right"></i> Drayage</a></li>
+                                    <li><a href="support.php"><i class="fas fa-caret-right"></i> Support</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -722,13 +694,38 @@ if (isset($_POST["submit"])) {
                     <div class="col-xl-3 col-lg-4 col-md-6">
                         <div class="footer-widget mb-50">
                             <div class="fw-title mb-30">
-                                <h5>Support & Downloads</h5>
+                                <h5>Contact Us</h5>
+                            </div>
+                            <div class="f-rc-post">
+                                <ul>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Call us</span>
+                                            <h5><a>+1-469-200-6603</a></h5>
+                                        </div>
+                                    </li>
+                                    <li>
+
+                                        <div class="f-rc-content">
+                                            <span>Email us</span>
+                                            <h5><a>info@nilcl.com</a></h5>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6">
+                        <div class="footer-widget mb-50">
+                            <div class="fw-title mb-30">
+                                <h5>Address</h5>
                             </div>
                             <div class="f-support-content">
-                                <p>Lorem ipsum dolor sit amet, consy eetur adipisc de elit. Quisque act raqum nunc no dolor
+                                <p>100 S Juniper Street, 3rd Floor, Philadelphia, PA 19087
                                 </p>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
-                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a>
+                                <!-- <a href="#" class="f-download-btn"><img src="img/images/f_download_btn01.png" alt="img"></a>
+                                <a href="#" class="f-download-btn"><img src="img/images/f_download_btn02.png" alt="img"></a> -->
                             </div>
                         </div>
                     </div>
@@ -740,7 +737,7 @@ if (isset($_POST["submit"])) {
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-7">
                         <div class="copyright-text">
-                            <p>Copyright© <span>StarTask </span> | All Rights Reserved</p>
+                            <p>Copyright© <span> <a href="login.php"> Nurture Int'l LCL </a> </span> | All Rights Reserved</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-5">
